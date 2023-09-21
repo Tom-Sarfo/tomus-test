@@ -14,7 +14,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
+import LocalMallIcon from "@mui/icons-material/LocalMall";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import Tooltip from "@mui/material/Tooltip";
 
 const Search = styled("div")(({ theme }) => ({
 	position: "relative",
@@ -122,7 +124,7 @@ export default function DesktopNavBar() {
 			<MenuItem>
 				<IconButton size="large" aria-label="show 4 new mails" color="inherit">
 					<Badge badgeContent={4} color="error">
-						<MailIcon />
+						<localMallIcon />
 					</Badge>
 				</IconButton>
 				<p>Messages</p>
@@ -134,7 +136,7 @@ export default function DesktopNavBar() {
 					color="inherit"
 				>
 					<Badge badgeContent={17} color="error">
-						<NotificationsIcon />
+						<FavoriteIcon />
 					</Badge>
 				</IconButton>
 				<p>Notifications</p>
@@ -185,28 +187,33 @@ export default function DesktopNavBar() {
 						/>
 					</Search>
 					<Box sx={{ flexGrow: 1 }} />
+
 					<Box
 						sx={{
 							display: { xs: "none", md: "flex" },
-	
+						}}
+						style={{
+							display: "flex",
+							justifyContent: "space-between",
+							width: "20%",
 						}}
 					>
-						<IconButton
-							size="large"
-							aria-label="show 4 new mails"
-							color="inherit"
-						>
-							<Badge badgeContent={4} color="error">
-								<MailIcon />
-							</Badge>
-						</IconButton>
+						<Tooltip title="visit our store">
+							<IconButton
+								size="large"
+								aria-label="show 4 new mails"
+								color="inherit"
+							>
+								<LocalMallIcon />
+							</IconButton>
+						</Tooltip>
 						<IconButton
 							size="large"
 							aria-label="show 17 new notifications"
 							color="inherit"
 						>
 							<Badge badgeContent={17} color="error">
-								<NotificationsIcon />
+								<FavoriteIcon />
 							</Badge>
 						</IconButton>
 						<IconButton
