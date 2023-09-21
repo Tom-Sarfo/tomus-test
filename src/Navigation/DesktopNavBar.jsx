@@ -156,7 +156,7 @@ export default function DesktopNavBar() {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="static">
+			<AppBar position="fixed" sx={{ bgcolor: "#872EB0" }}>
 				<Toolbar>
 					<IconButton
 						size="large"
@@ -173,7 +173,7 @@ export default function DesktopNavBar() {
 						component="div"
 						sx={{ display: { xs: "none", sm: "block" } }}
 					>
-						MUI
+						Tomus
 					</Typography>
 					<Search>
 						<SearchIconWrapper>
@@ -185,7 +185,12 @@ export default function DesktopNavBar() {
 						/>
 					</Search>
 					<Box sx={{ flexGrow: 1 }} />
-					<Box sx={{ display: { xs: "none", md: "flex" } }}>
+					<Box
+						sx={{
+							display: { xs: "none", md: "flex" },
+	
+						}}
+					>
 						<IconButton
 							size="large"
 							aria-label="show 4 new mails"
@@ -214,18 +219,6 @@ export default function DesktopNavBar() {
 							color="inherit"
 						>
 							<AccountCircle />
-						</IconButton>
-					</Box>
-					<Box sx={{ display: { xs: "flex", md: "none" } }}>
-						<IconButton
-							size="large"
-							aria-label="show more"
-							aria-controls={mobileMenuId}
-							aria-haspopup="true"
-							onClick={handleMobileMenuOpen}
-							color="inherit"
-						>
-							<MoreIcon />
 						</IconButton>
 					</Box>
 				</Toolbar>
