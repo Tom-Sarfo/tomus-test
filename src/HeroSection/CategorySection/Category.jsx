@@ -2,8 +2,9 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import CategoryCard from "./CategoryCard";
 
-export default function CenteredTabs() {
+export default function Category() {
 	const [value, setValue] = React.useState(0);
 
 	const handleChange = (event, newValue) => {
@@ -19,7 +20,7 @@ export default function CenteredTabs() {
 				<Tab label="Item Two" />
 				<Tab label="Item Three" />
 			</Tabs>
-			<div>this thomas</div>
+			<CategoryCard />
 		</Box>
 	);
 }
