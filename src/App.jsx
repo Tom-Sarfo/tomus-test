@@ -9,8 +9,7 @@ import { Paper } from "@mui/material";
 import DesktopNavBar from "./Navigation/desktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
 import Category from "./HeroSection/CategorySection/Category";
-import Stories from "./HeroSection/Stories/Stories";
-import Hero from "./HeroSection/Hero/Hero";
+import MainSection from "./HeroSection/MainSection";
 
 function App() {
 	return (
@@ -27,8 +26,7 @@ function App() {
 			<section className="HeroSection">
 				<Paper elevation={1} className="HeroPaper">
 					<Category />
-					<Stories />
-					<Hero />
+					<MainSection />
 				</Paper>
 			</section>
 

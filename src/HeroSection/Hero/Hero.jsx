@@ -1,3 +1,14 @@
+import { Box } from "@mui/material";
+
 export default function Hero() {
-	return <div>Hero</div>;
+	return <div>
+        <Box mt={2} sx={{
+            width: 900,
+            height: 320,
+            backgroundColor: "red"
+        }}>
+
+        </Box>
+
+    </div>;
 }
