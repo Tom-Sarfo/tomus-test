@@ -160,15 +160,6 @@ export default function DesktopNavBar() {
 		<Box sx={{ flexGrow: 1 }}>
 			<AppBar position="fixed" sx={{ bgcolor: "#872EB0" }}>
 				<Toolbar>
-					<IconButton
-						size="large"
-						edge="start"
-						color="inherit"
-						aria-label="open drawer"
-						sx={{ mr: 2 }}
-					>
-						<MenuIcon />
-					</IconButton>
 					<Typography
 						variant="h6"
 						noWrap
