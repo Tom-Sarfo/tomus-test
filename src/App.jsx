@@ -4,20 +4,34 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
 import "./Navigation/Styles/SwitchScreen.css";
+import { Paper } from "@mui/material";
 
 import DesktopNavBar from "./Navigation/desktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
+import Category from "./HeroSection/CategorySection/Category";
+import Stories from "./HeroSection/Stories/Stories";
+import Hero from "./HeroSection/Hero/Hero";
 
 function App() {
 	return (
 		<>
-			<div className="DesktopNavBar">
-				<DesktopNavBar />
-			</div>
+			<nav>
+				<div className="DesktopNavBar">
+					<DesktopNavBar />
+				</div>
 
-			<div className="MobileNavBar">
-				<MobileNavbar />
-			</div>
+				<div className="MobileNavBar">
+					<MobileNavbar />
+				</div>
+			</nav>
+			<section className="HeroSection">
+				<Paper elevation={1} className="HeroPaper">
+					<Category />
+					<Stories />
+					<Hero />
+				</Paper>
+			</section>
+
 			<div>Tomus is back</div>
 		</>
 	);

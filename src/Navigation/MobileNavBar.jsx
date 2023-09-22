@@ -14,7 +14,7 @@ import Menu from "@mui/material/Menu";
 
 import "./Styles/Navigation.css";
 
-export default function MenuAppBar() {
+export default function MobileNavBar() {
 	const [auth, setAuth] = React.useState(true);
 	const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -45,7 +45,7 @@ export default function MenuAppBar() {
         />
       </FormGroup> */}
 			<AppBar
-				position="static"
+				position="fixed"
 				className="MobileAppBar"
 				sx={{ bgcolor: "#872EB0" }}
 			>

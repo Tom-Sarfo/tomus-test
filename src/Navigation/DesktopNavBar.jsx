@@ -124,7 +124,7 @@ export default function DesktopNavBar() {
 			<MenuItem>
 				<IconButton size="large" aria-label="show 4 new mails" color="inherit">
 					<Badge badgeContent={4} color="error">
-						<localMallIcon />
+						<LocalMallIcon />
 					</Badge>
 				</IconButton>
 				<p>Messages</p>
