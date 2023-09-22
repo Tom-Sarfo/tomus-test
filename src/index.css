@@ -30,6 +30,8 @@ h1 {
 
 body {
 	max-height: 100vh;
+	background-color: #f3f3f3;
+	padding: 0.5rem;
 }
 @media (prefers-color-scheme: light) {
 	:root {
