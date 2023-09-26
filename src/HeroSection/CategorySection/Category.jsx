@@ -16,9 +16,9 @@ export default function Category() {
 	return (
 		<Box sx={{ width: "100%", bgcolor: "background.paper" }}>
 			<Tabs value={value} onChange={handleChange} >
-				<Tab label="Item One" />
-				<Tab label="Item Two" />
-				<Tab label="Item Three" />
+				<Tab label="Beads" />
+				<Tab label="Men " />
+				<Tab label="Ladies" />
 			</Tabs>
 			<CategoryCard />
 		</Box>

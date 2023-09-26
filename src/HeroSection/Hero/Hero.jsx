@@ -5,7 +5,7 @@ export default function Hero() {
         <Box mt={2} sx={{
             width: 900,
             height: 320,
-            backgroundColor: "red"
+            backgroundColor: "grey"
         }}>
 
         </Box>
