@@ -4,3 +4,10 @@
     align-items: center;
     padding: 1rem;
 }
+.Category{
+ visibility: hidden;
+}
+
+
+
+@media 

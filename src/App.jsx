@@ -24,9 +24,12 @@ function App() {
 				</div>
 			</nav>
 			<section className="HeroSection">
-				<Paper elevation={1} className="HeroPaper" sx={{ width: "100%"}}>
+				<Paper elevation={1} className="HeroPaper">
+					{/* Desktop Hero section */}
 					<Category />
 					<MainSection />
+				{/* Mobile hero section */}
+                    
 				</Paper>
 			</section>
 
