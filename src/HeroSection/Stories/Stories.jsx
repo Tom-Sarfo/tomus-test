@@ -12,7 +12,7 @@ export default function Stories() {
 			<Box
 				mt={2}
 				sx={{
-					width: 900,
+					width: "100%",
 					height: 50,
 					display: "flex",
 					// backgroundColor: "grey",

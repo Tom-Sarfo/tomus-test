@@ -14,7 +14,7 @@ export default function Category() {
     console.log(value)
 
 	return (
-		<Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+		<Box sx={{ width: "30%", bgcolor: "background.paper" }}>
 			<Tabs value={value} onChange={handleChange} >
 				<Tab label="Beads" />
 				<Tab label="Men " />

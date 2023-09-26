@@ -24,7 +24,7 @@ function App() {
 				</div>
 			</nav>
 			<section className="HeroSection">
-				<Paper elevation={1} className="HeroPaper">
+				<Paper elevation={1} className="HeroPaper" sx={{ width: "100%"}}>
 					<Category />
 					<MainSection />
 				</Paper>
