@@ -4,6 +4,13 @@
 
 .HeroPaper {
 	display: flex;
-    padding: 1rem;
-
+	padding: 1rem;
 }
+
+/* media queries */
+
+/* @media (max-width: 670px) {
+	.DesktopHero {
+		display: none;
+	}
+} */

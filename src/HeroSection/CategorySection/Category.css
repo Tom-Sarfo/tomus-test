@@ -5,9 +5,13 @@
     padding: 1rem;
 }
 .Category{
- visibility: hidden;
+ /* visibility: hidden; */
 }
 
 
 
-@media 
+@media (max-width: 670px) {
+    .Category{
+        visibility: hidden;
+    }
+}

@@ -10,25 +10,19 @@ export default function Stories() {
 	return (
 		<div className="Stories">
 			<Box
+				className="StoriesBox"
 				mt={2}
-				sx={{
-					width: "100%",
-					height: 50,
-					display: "flex",
-					// backgroundColor: "grey",
-				}}
+				sx={
+					{
+						// backgroundColor: "grey",
+					}
+				}
 			>
 				<Stack direction="row" spacing={2}>
 					<Box
+						className="circle"
 						sx={{
-							width: 60,
-							height: 60,
-							backgroundColor: "white",
-							borderRadius: "50%",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-							border: "2px solid #872EB0",
+							
 						}}
 					>
 						<Avatar
@@ -38,16 +32,8 @@ export default function Stories() {
 						/>
 					</Box>
 					<Box
-						sx={{
-							width: 60,
-							height: 60,
-							backgroundColor: "white",
-							borderRadius: "50%",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-							border: "2px solid #872EB0",
-						}}
+						className="circle"
+	
 					>
 						<Avatar
 							alt="Remy Sharp"
@@ -56,16 +42,8 @@ export default function Stories() {
 						/>
 					</Box>
 					<Box
-						sx={{
-							width: 60,
-							height: 60,
-							backgroundColor: "white",
-							borderRadius: "50%",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-							border: "2px solid #872EB0",
-						}}
+						className="circle"
+				
 					>
 						<Avatar
 							alt="Remy Sharp"
@@ -74,16 +52,8 @@ export default function Stories() {
 						/>
 					</Box>
 					<Box
-						sx={{
-							width: 60,
-							height: 60,
-							backgroundColor: "white",
-							borderRadius: "50%",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-							border: "2px solid #872EB0",
-						}}
+						className="circle"
+		
 					>
 						<Avatar
 							alt="Remy Sharp"
@@ -92,16 +62,7 @@ export default function Stories() {
 						/>
 					</Box>
 					<Box
-						sx={{
-							width: 60,
-							height: 60,
-							backgroundColor: "white",
-							borderRadius: "50%",
-							display: "flex",
-							justifyContent: "center",
-							alignItems: "center",
-							border: "2px solid #872EB0",
-						}}
+						className="circle"
 					>
 						<Avatar
 							alt="Remy Sharp"
@@ -109,7 +70,9 @@ export default function Stories() {
 							sx={{ width: 50, height: 50 }}
 						/>
 					</Box>
-					<Button variant="contained" sx={{ bgcolor: "#872EB0"}}>Share your experience</Button>
+					<Button variant="contained" sx={{ bgcolor: "#872EB0" }}>
+						Share your experience
+					</Button>
 				</Stack>
 			</Box>
 		</div>
