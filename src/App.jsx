@@ -10,6 +10,7 @@ import DesktopNavBar from "./Navigation/desktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
 import Category from "./HeroSection/CategorySection/Category";
 import MainSection from "./HeroSection/MainSection";
+import HeroMobileSmall from "./HeroSectionMobileSmall/HeroMobileSmall"
 function App() {
 	return (
 		<>
@@ -26,6 +27,9 @@ function App() {
 				<Paper elevation={1} className="HeroPaper">
 					<Category />
 					<MainSection />
+				</Paper>
+				<Paper className="HeroForMobileSmall">
+					<HeroMobileSmall />
 				</Paper>
 			</section>
 

@@ -7,10 +7,19 @@
 	padding: 1rem;
 }
 
-/* media queries */
+.HeroForMobileSmall {
+	display: none;
+}
 
-/* @media (max-width: 670px) {
-	.DesktopHero {
+/* media queries */
+@media (max-width: 320px) {
+	.HeroForMobileSmall {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.HeroPaper {
 		display: none;
 	}
-} */
+}

@@ -1,0 +1,12 @@
+.MainSection{
+    width: 75%;
+    padding: 0.5rem;
+}
+
+@media (max-width: 320px){
+    .BannerMobileSmall{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    
+}
