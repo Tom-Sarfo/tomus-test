@@ -3,12 +3,12 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 
-import "./Stories.css";
+import "./StoriesDesktop.css";
 
 export default function Stories() {
 	// let length = [1,2,3,4,5,6];
 	return (
-		<div className="Stories">
+		<div className="StoriesDesktop">
 			<Box
 				className="StoriesBox"
 				mt={2}

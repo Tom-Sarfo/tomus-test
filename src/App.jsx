@@ -10,7 +10,7 @@ import DesktopNavBar from "./Navigation/desktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
 import Category from "./HeroSection/CategorySection/Category";
 import MainSection from "./HeroSection/MainSection";
-import HeroMobileSmall from "./HeroSectionMobileSmall/HeroMobileSmall"
+import Hero from "./HeroSectionMobileSmall/Hero/BannerMobileSmall";
 function App() {
 	return (
 		<>
@@ -28,9 +28,7 @@ function App() {
 					<Category />
 					<MainSection />
 				</Paper>
-				<Paper className="HeroForMobileSmall">
-					<HeroMobileSmall />
-				</Paper>
+				<Hero />
 			</section>
 
 			<div>Tomus is back</div>

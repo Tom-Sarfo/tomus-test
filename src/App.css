@@ -1,5 +1,5 @@
 .HeroSection {
-	margin-top: 4rem;
+	margin-top: 3rem;
 }
 
 .HeroPaper {
@@ -12,11 +12,11 @@
 }
 
 /* media queries */
-@media (max-width: 320px) {
+@media (max-width: 767px) {
 	.HeroForMobileSmall {
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		/* justify-content: center; */
+		/* align-items: center; */
 	}
 
 	.HeroPaper {
