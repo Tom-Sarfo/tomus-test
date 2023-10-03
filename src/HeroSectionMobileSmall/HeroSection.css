@@ -12,5 +12,7 @@
 @media (max-width: 375px) {
 	.BannerMobileSmall {
 	    margin-top: 0.5rem;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 10px;
 	}
 }

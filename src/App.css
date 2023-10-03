@@ -11,11 +11,28 @@
 	display: none;
 }
 
+.CatalogSection{
+	display: none;
+}
+
+.caption {
+
+}
+
 /* media queries */
 @media (max-width: 320px) {
 	.HeroPaper {
 		display: none;
 	}
+	.CatalogSection{
+		display: block;
+		height: 100%;
+	}
+	.caption {
+		display: flex;
+		justify-content: space-between;
+	}
+	
 }
 
 

@@ -29,8 +29,8 @@ h1 {
 }
 
 body {
-	max-height: 100vh;
-	background-color: #f3f3f3;
+	max-height: 100%;
+	background-color: #ffffff;
 	/* padding: 0.5rem; */
 	width: 100%;
 	margin: 0px;

@@ -5,13 +5,14 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import "./Navigation/Styles/SwitchScreen.css";
 import { Paper } from "@mui/material";
-import { Button } from 'antd';
+import { Button } from "antd";
 
 import DesktopNavBar from "./Navigation/desktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
 import Category from "./HeroSection/CategorySection/Category";
 import MainSection from "./HeroSection/MainSection";
 import Hero from "./HeroSectionMobileSmall/Hero/BannerMobileSmall";
+import MainCatalog from "./Catalog/MainCatalog";
 function App() {
 	return (
 		<>
@@ -32,8 +33,12 @@ function App() {
 				<Hero />
 			</section>
 
+			<section className="CatalogSection">
+				<MainCatalog />
+			</section>
+
 			<div>Tomus is back</div>
-			<Button type="primary">Add</Button>
+			{/* <Button type="primary">Add</Button> */}
 		</>
 	);
 }
