@@ -47,20 +47,21 @@ export default function MobileNavBar() {
 			<AppBar
 				position="fixed"
 				className="MobileAppBar"
-				sx={{ bgcolor: "#872EB0" }}
+				sx={{ bgcolor: "white" }}
 			>
 				<Toolbar>
 					<IconButton
 						size="large"
 						edge="start"
-						color="inherit"
+						// color="inherit"
+
 						aria-label="menu"
-						sx={{ mr: 2 }}
+						sx={{ mr: 2, color: "#872EB0"}}
 					>
 						<MenuIcon />
 					</IconButton>
 					<Box sx={{ flexGrow: 1 }} />
-					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+					<Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#872EB0" }}>
 						Tomus
 					</Typography>
 					{auth && (
@@ -71,7 +72,7 @@ export default function MobileNavBar() {
 								aria-controls="menu-appbar"
 								aria-haspopup="true"
 								onClick={handleMenu}
-								color="inherit"
+								sx={{color: "#872EB0"}}
 							>
 								<AccountCircle />
 							</IconButton>

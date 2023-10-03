@@ -5,9 +5,8 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import "./Navigation/Styles/SwitchScreen.css";
 import { Paper } from "@mui/material";
-import { Button } from "antd";
 
-import DesktopNavBar from "./Navigation/desktopNavBar";
+import DesktopNavBar from "./Navigation/DesktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
 import Category from "./HeroSection/CategorySection/Category";
 import MainSection from "./HeroSection/MainSection";

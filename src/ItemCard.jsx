@@ -25,7 +25,7 @@ export default function ItemCard({ imgUrl }) {
 						</div>
 					</Typography>
 				</CardContent>
-				<center><Button sx={{marginBottom: "0.5rem"}}>shop now</Button></center>
+				<center><Button sx={{marginBottom: "0.5rem", color: "#872EB0" }}>shop now</Button></center>
 			</CardActionArea>
 		</Card>
 	);
