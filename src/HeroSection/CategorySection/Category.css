@@ -12,6 +12,6 @@
 
 @media (max-width: 670px) {
     .Category{
-        visibility: hidden;
+        display: none;
     }
 }

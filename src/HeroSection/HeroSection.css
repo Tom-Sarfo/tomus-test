@@ -6,3 +6,10 @@
 .BannerMobileSmall{
     margin-top: 0.5rem;
 }
+
+@media (max-width: 412px) {
+	/* hidden selectors */
+	.MainSection{
+        display: none;
+    }
+}

@@ -11,20 +11,24 @@
 	display: none;
 }
 
-.CatalogSection{
-	display: none;
+.CatalogSection {
+	/* display: none; */
 }
 
 .caption {
-
 }
 
+.ItemCard {
+}
 /* media queries */
 @media (max-width: 320px) {
 	.HeroPaper {
 		display: none;
 	}
-	.CatalogSection{
+	.ItemCard {
+		max-width: 130px;
+	}
+	.CatalogSection {
 		display: block;
 		height: 100%;
 	}
@@ -32,7 +36,23 @@
 		display: flex;
 		justify-content: space-between;
 	}
-	
 }
 
+@media (max-width: 412px) {
+	/* hidden selectors */
+	.HeroPaper {
+		display: none;
+	}
 
+	.ItemCard {
+		width: 150 px;
+	}
+	.CatalogSection {
+		display: block;
+		height: 100%;
+	}
+	.caption {
+		display: flex;
+		justify-content: space-between;
+	}
+}

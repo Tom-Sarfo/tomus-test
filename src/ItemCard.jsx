@@ -6,7 +6,7 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 
 export default function ItemCard({ imgUrl }) {
 	return (
-		<Card sx={{ maxWidth: 130 }}>
+		<Card className="ItemCard">
 			<CardActionArea>
 				<CardMedia
 					component="img"
