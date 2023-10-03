@@ -38,6 +38,12 @@
 	}
 }
 
+@media (min-width: 375px){
+	.ItemCard {
+		min-width: 150px;
+	}
+}
+
 @media (max-width: 412px) {
 	/* hidden selectors */
 	.HeroPaper {
@@ -45,8 +51,9 @@
 	}
 
 	.ItemCard {
-		width: 150 px;
+		min-width: 170px;
 	}
+
 	.CatalogSection {
 		display: block;
 		height: 100%;
