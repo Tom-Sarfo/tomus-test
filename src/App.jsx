@@ -12,6 +12,7 @@ import Category from "./HeroSection/CategorySection/Category";
 import MainSection from "./HeroSection/MainSection";
 import Hero from "./HeroSectionMobileSmall/Hero/BannerMobileSmall";
 import MainCatalog from "./Catalog/MainCatalog";
+import FirstDiscovery from "./Discovery/FirstDiscovery";
 function App() {
 	return (
 		<>
@@ -34,6 +35,9 @@ function App() {
 
 			<section className="CatalogSection">
 				<MainCatalog />
+			</section>
+			<section className="FirstDiscovery">
+			<FirstDiscovery />
 			</section>
 
 			<div>Tomus is back</div>

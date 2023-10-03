@@ -8,6 +8,8 @@ export default function MainCatalog() {
 		<div className="MainCatalog">
 			<ItemCard imgUrl={imgUrl1}/>
 			<ItemCard imgUrl={imgUrl2}/>
+            <ItemCard imgUrl={imgUrl1}/>
+			<ItemCard imgUrl={imgUrl2}/>
 			{/* <ItemCard /> */}
 		</div>
 	);

@@ -52,6 +52,7 @@
 
 	.ItemCard {
 		min-width: 170px;
+		margin-bottom: 1rem;
 	}
 
 	.CatalogSection {
