@@ -5,6 +5,7 @@ import "@fontsource/roboto/700.css";
 import "./App.css";
 import "./Navigation/Styles/SwitchScreen.css";
 import { Paper } from "@mui/material";
+import { Button } from 'antd';
 
 import DesktopNavBar from "./Navigation/desktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
@@ -32,6 +33,7 @@ function App() {
 			</section>
 
 			<div>Tomus is back</div>
+			<Button type="primary">Add</Button>
 		</>
 	);
 }

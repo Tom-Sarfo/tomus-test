@@ -5,8 +5,12 @@
 
 @media (max-width: 320px) {
 	.BannerMobileSmall {
-		/* border-top-left-radius: 5px;
-        border-top-right-radius: 5px; */
-        margin-top: 0.5rem;
+	    margin-top: 0.5rem;
+	}
+}
+
+@media (max-width: 375px) {
+	.BannerMobileSmall {
+	    margin-top: 0.5rem;
 	}
 }

@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 
 export default function Hero() {
 	return (
-		<div>
+		<div className="banner">
 			<Card
 				sx={{
 					width: "100%",
