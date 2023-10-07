@@ -2,14 +2,23 @@ import CardMedia from "@mui/material/CardMedia";
 import "../HeroSection.css";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
-import { Button } from "antd";
+import Button from "@mui/material/Button";
 
 export default function Hero() {
 	return (
 		<div className="banner">
-			<Typography variant="h4" component="h2" className="Tagline">
-				<b>Craft <br />that <br />fit your lifestyle</b>
-			</Typography>
+			<div className="Tagline">
+			<Typography variant="h4" component="h2">
+				<b>
+					Craft <br />
+					that <br />
+					fit your lifestyle
+				</b>
+			</Typography><br />
+			<Button variant="contained" href="#contained-buttons" className="HeroBtn" sx={{bgcolor: "white", color: "#904B88"}}>
+				window shopping
+			</Button>
+			</div>
 			<Card
 				sx={{
 					width: "100%",
@@ -30,7 +39,6 @@ export default function Hero() {
 					}}
 				/>
 			</Card>
-			<Button variant="primary">Window shopping</Button>
 		</div>
 	);
 }
