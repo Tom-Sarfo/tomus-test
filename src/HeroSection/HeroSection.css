@@ -6,6 +6,19 @@
 .BannerMobileSmall{
     margin-top: 0.5rem;
 }
+.banner {
+	position: relative;
+}
+.Tagline {
+	position: absolute;
+	padding-top: 100px;
+    font-family: roboto;
+    padding-left: 200px;
+    color: #904B88;
+    
+    /* margin-top: 50px; */
+}
+
 
 @media (max-width: 412px) {
 	/* hidden selectors */

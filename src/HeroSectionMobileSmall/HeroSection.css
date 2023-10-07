@@ -5,13 +5,13 @@
 
 @media (max-width: 320px) {
 	.BannerMobileSmall {
-	    margin-top: 0.5rem;
+		margin-top: 0.5rem;
 	}
 }
 
 @media (max-width: 412px) {
 	.BannerMobileSmall {
-	    height: 4500px;
+		height: 4500px;
 	}
 	.banner {
 		height: 450px;

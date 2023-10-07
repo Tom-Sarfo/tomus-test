@@ -1,10 +1,15 @@
 import CardMedia from "@mui/material/CardMedia";
 import "../HeroSection.css";
 import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import { Button } from "antd";
 
 export default function Hero() {
 	return (
 		<div className="banner">
+			<Typography variant="h4" component="h2" className="Tagline">
+				<b>Craft <br />that <br />fit your lifestyle</b>
+			</Typography>
 			<Card
 				sx={{
 					width: "100%",
@@ -21,10 +26,11 @@ export default function Hero() {
 					alt="Paella dish"
 					sx={{
 						borderBottomRightRadius: "0px",
-						borderBottomLeftRadius: "0px"
+						borderBottomLeftRadius: "0px",
 					}}
 				/>
 			</Card>
+			<Button variant="primary">Window shopping</Button>
 		</div>
 	);
 }
