@@ -13,6 +13,8 @@ import MainSection from "./HeroSection/MainSection";
 import Hero from "./HeroSectionMobileSmall/Hero/BannerMobileSmall";
 import MainCatalog from "./Catalog/MainCatalog";
 import FirstDiscovery from "./Discovery/FirstDiscovery";
+import Typography from "@mui/material/Typography";
+
 function App() {
 	return (
 		<>
@@ -34,10 +36,11 @@ function App() {
 			</section>
 
 			<section className="CatalogSection">
+				<Typography className="catalogTitle">Explore <b><i>collections</i></b></Typography>
 				<MainCatalog />
 			</section>
 			<section className="FirstDiscovery">
-			<FirstDiscovery />
+				<FirstDiscovery />
 			</section>
 
 			<div>Tomus is back</div>

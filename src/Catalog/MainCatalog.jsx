@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import ItemCard from "../ItemCard";
 import "./Catalog.css"
 

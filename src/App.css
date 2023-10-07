@@ -12,7 +12,7 @@
 }
 
 .CatalogSection {
-	/* display: none; */
+	margin-top: 20px;
 }
 
 .caption {
@@ -20,6 +20,9 @@
 
 .ItemCard {
 	position: relative;
+}
+.catalogTitle{
+	text-align: center;
 }
 
 .Favourite{
@@ -31,7 +34,7 @@
 }
 
 .CardImage{
-
+   
 }
 /* media queries */
 @media (max-width: 320px) {
