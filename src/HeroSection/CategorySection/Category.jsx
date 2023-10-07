@@ -1,5 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import CategoryCard from "./CategoryCard";
@@ -16,6 +17,7 @@ export default function Category() {
 
 	return (
 		<Box sx={{ width: "30%", bgcolor: "background.paper" }} className="Category">
+			<CssBaseline />
 			<Tabs value={value} onChange={handleChange} >
 				<Tab label="Beads" />
 				<Tab label="Men " />

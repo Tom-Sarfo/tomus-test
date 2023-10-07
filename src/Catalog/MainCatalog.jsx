@@ -10,7 +10,6 @@ export default function MainCatalog() {
 			<ItemCard imgUrl={imgUrl2}/>
             <ItemCard imgUrl={imgUrl1}/>
 			<ItemCard imgUrl={imgUrl2}/>
-			{/* <ItemCard /> */}
 		</div>
 	);
 }

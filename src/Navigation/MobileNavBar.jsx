@@ -10,6 +10,8 @@ import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import MenuItem from "@mui/material/MenuItem";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+
 import Menu from "@mui/material/Menu";
 
 import "./Styles/Navigation.css";
@@ -32,18 +34,6 @@ export default function MobileNavBar() {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			{/* <FormGroup>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={auth}
-              onChange={handleChange}
-              aria-label="login switch"
-            />
-          }
-          label={auth ? 'Logout' : 'Login'}
-        />
-      </FormGroup> */}
 			<AppBar
 				position="fixed"
 				className="MobileAppBar"
@@ -74,7 +64,7 @@ export default function MobileNavBar() {
 								onClick={handleMenu}
 								sx={{color: "#872EB0"}}
 							>
-								<AccountCircle />
+								<FavoriteIcon />
 							</IconButton>
 							<Menu
 								id="menu-appbar"

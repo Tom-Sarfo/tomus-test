@@ -149,7 +149,7 @@ export default function DesktopNavBar() {
 					aria-haspopup="true"
 					color="inherit"
 				>
-					<AccountCircle />
+					<FavoriteIcon/>
 				</IconButton>
 				<p>Profile</p>
 			</MenuItem>

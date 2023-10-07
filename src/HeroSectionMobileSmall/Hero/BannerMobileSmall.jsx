@@ -8,14 +8,14 @@ export default function Hero() {
 			<Card
 				sx={{
 					width: "100%",
-					height: 320,
+					height: 450,
 					backgroundColor: "grey",
 				}}
 				className="BannerMobileSmall"
 			>
 				<CardMedia
 					component="img"
-					height="320"
+					height="450"
 					width="100%"
 					image="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355487565.jpg"
 					alt="Paella dish"

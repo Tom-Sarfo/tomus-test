@@ -10,5 +10,10 @@
 }
 
 @media (max-width: 412px) {
-	
+	.BannerMobileSmall {
+	    height: 4500px;
+	}
+	.banner {
+		height: 450px;
+	}
 }

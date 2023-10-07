@@ -2,7 +2,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActionArea } from "@mui/material";
+import Favourite from "./Favourite";
 
 export default function ItemCard({ imgUrl }) {
 	return (
@@ -13,19 +14,27 @@ export default function ItemCard({ imgUrl }) {
 					height="160"
 					image={imgUrl}
 					alt="green iguana"
+					className="CardImage"
 				/>
+				<Favourite />
 				<CardContent>
 					{/* <Typography gutterBottom variant="h5" component="div">
             Lizard
           </Typography> */}
 					<Typography height={30} variant="body2" color="text.secondary">
 						<div className="caption">
-							<Typography><b>Afro-G</b></Typography>
+							<Typography>
+								<b>Afro-G</b>
+							</Typography>
 							<Typography>¢200</Typography>
 						</div>
 					</Typography>
 				</CardContent>
-				<center><Button sx={{marginBottom: "0.5rem", color: "#872EB0" }}>shop now</Button></center>
+				<center>
+					<Button sx={{ marginBottom: "0.5rem", color: "#872EB0" }}>
+						shop now
+					</Button>
+				</center>
 			</CardActionArea>
 		</Card>
 	);
