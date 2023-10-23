@@ -22,7 +22,7 @@ export default function Hero() {
 					className="HeroBtn"
 					sx={{ bgcolor: "white", color: "#904B88" }}
 				>
-					Do window shopping
+					Find your fit
 				</Button>
 			</div>
 			<Card

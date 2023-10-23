@@ -27,3 +27,17 @@
         display: none;
     }
 }
+
+@media (max-width: 320px) {
+	/* hidden selectors */
+	.Tagline{
+        padding-left: 100px;
+    }
+}
+
+@media (max-width: 376px) {
+	/* hidden selectors */
+	.Tagline{
+        padding-left: 100px;
+    }
+}

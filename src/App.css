@@ -21,20 +21,19 @@
 .ItemCard {
 	position: relative;
 }
-.catalogTitle{
+.catalogTitle {
 	text-align: center;
 }
 
-.Favourite{
+.Favourite {
 	position: absolute;
 	top: 0;
 	margin-top: 3px;
 	margin-left: 3px;
-	color:#872EB0;
+	color: #872eb0;
 }
 
-.CardImage{
-   
+.CardImage {
 }
 /* media queries */
 @media (max-width: 320px) {
@@ -42,7 +41,7 @@
 		display: none;
 	}
 	.ItemCard {
-		max-width: 130px;
+		max-width: 250px;
 	}
 	.CatalogSection {
 		display: block;
@@ -52,12 +51,25 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	/* .Tagline{
+		margin-right: 0px;
+	} */
 }
 
-@media (min-width: 375px){
+/* @media (max-width: 375px) {
 	.ItemCard {
-		min-width: 150px;
+		max-width: 0px;
 	}
+} */
+
+@media (max-width: 376px) {
+	.ItemCard {
+		width: 260px;
+	}
+	.CardImage{
+		height: 270px;
+	}
+	
 }
 
 @media (max-width: 412px) {
