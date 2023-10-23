@@ -1,8 +1,12 @@
 import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
+import Tagline from "../Tagline";
 export default function Hero() {
 	return (
-		<div className="BannerlargeScreen" > 
+		<div className="BannerlargeScreen">
+			<div className="TaglineWrapper"> 
+				<Tagline />
+			</div>
 			<Card
 				mt={2}
 				sx={{

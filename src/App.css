@@ -58,6 +58,13 @@
 		height: 360px;
 	}
 
+	.TaglineWrapper{
+		padding-top: 50px;
+		/* margin-top: 50px; */
+		padding-left: 300px;
+		
+	}
+
 }
 @media (max-width: 320px) {
 	.HeroPaper {
