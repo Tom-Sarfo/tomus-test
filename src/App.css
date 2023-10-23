@@ -45,7 +45,19 @@
 }
 /* media queries */
 @media (max-width: 767px) {
-	
+	.CatalogSection{
+		margin-top: 30px;
+	}
+
+	.ItemCard{
+		width: 350px;
+		margin-bottom: 20px;
+	}
+
+	.CardImage {
+		height: 360px;
+	}
+
 }
 @media (max-width: 320px) {
 	.HeroPaper {
