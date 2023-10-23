@@ -1,5 +1,16 @@
 .LargeScreenBanner {
 	display: flex;
+	width: 100%;
+}
+.BannerlargeScreen1 {
+	margin-top: -87px;
+	position: relative;
+}
+
+.TaglineWrapperLScreen {
+	margin-top: 90px;
+	position: absolute;
+	margin-left: 500px;
 }
 
 .MediumScreen {

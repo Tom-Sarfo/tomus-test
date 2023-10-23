@@ -4,7 +4,7 @@ import Tagline from "../Tagline";
 export default function Hero() {
 	return (
 		<div className="BannerlargeScreen">
-			<div className="TaglineWrapper"> 
+			<div className="TaglineWrapper">
 				<Tagline />
 			</div>
 			<Card
@@ -16,7 +16,7 @@ export default function Hero() {
 			>
 				<img
 					width="767"
-					src="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3346646609.jpg"
+					src="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355500594.jpg"
 					alt="Tomus slippers"
 				/>
 			</Card>

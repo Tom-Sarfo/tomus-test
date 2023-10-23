@@ -19,7 +19,7 @@ export default function Tagline() {
 				className="HeroBtn"
 				sx={{ bgcolor: "white", color: "#904B88" }}
 			>
-				Find your fit
+				Shop Now
 			</Button>
 		</div>
 	);
