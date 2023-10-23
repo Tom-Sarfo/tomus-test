@@ -149,7 +149,7 @@ export default function DesktopNavBar() {
 					aria-haspopup="true"
 					color="inherit"
 				>
-					<FavoriteIcon/>
+					<FavoriteIcon />
 				</IconButton>
 				<p>Profile</p>
 			</MenuItem>
@@ -158,17 +158,17 @@ export default function DesktopNavBar() {
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="fixed" sx={{ bgcolor: "#872EB0" }}>
+			<AppBar position="fixed" sx={{ bgcolor: "white" }}>
 				<Toolbar>
 					<Typography
 						variant="h6"
 						noWrap
 						component="div"
-						sx={{ display: { xs: "none", sm: "block" } }}
+						sx={{ display: { xs: "none", sm: "block", color: "#872EB0" } }}
 					>
 						Tomus
 					</Typography>
-					<Search>
+					<Search sx={{ color: "#872EB0" }}>
 						<SearchIconWrapper>
 							<SearchIcon />
 						</SearchIconWrapper>
@@ -202,22 +202,12 @@ export default function DesktopNavBar() {
 							size="large"
 							aria-label="show 17 new notifications"
 							color="inherit"
+							edge="end"
 						>
 							<Badge badgeContent={17} color="error">
-								<FavoriteIcon />
+								<FavoriteIcon sx={{ color: "#872EB0" }} />
 							</Badge>
-						</IconButton>
-						<IconButton
-							size="large"
-							edge="end"
-							aria-label="account of current user"
-							aria-controls={menuId}
-							aria-haspopup="true"
-							onClick={handleProfileMenuOpen}
-							color="inherit"
-						>
-							<AccountCircle />
-						</IconButton>
+						</IconButton> 
 					</Box>
 				</Toolbar>
 			</AppBar>

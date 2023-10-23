@@ -15,7 +15,7 @@
 	display: none;
 }
 
-.BannerMobileSmall{
+.BannerMobileSmall {
 	width: 100%;
 }
 
@@ -45,9 +45,7 @@
 }
 /* media queries */
 @media (max-width: 767px) {
-	.BannerlargeScreen{
-		width: 767px;
-	}
+	
 }
 @media (max-width: 320px) {
 	.HeroPaper {
@@ -85,11 +83,11 @@
 }
 
 @media (max-width: 412px) {
-	.HeroForMobileSmall{
-		display: block;
-	}
-	.HeroPaper {
+	.BannerlargeScreen{
 		display: none;
+	}
+	.banner {
+		display: block;
 	}
 
 	.ItemCard {
