@@ -27,9 +27,7 @@ function App() {
 				</div>
 			</nav>
 			<section className="HeroSection">
-				<Paper elevation={1} className="HeroPaper">
-					<MainSection />
-				</Paper>
+				<MainSection />
 				<Hero />
 			</section>
 

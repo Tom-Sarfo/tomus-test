@@ -1,5 +1,5 @@
 .HeroSection {
-	margin-top: 3rem;
+	/* margin-top: 3rem; */
 }
 
 .HeroPaper {
@@ -14,6 +14,11 @@
 .banner {
 	display: none;
 }
+
+.BannerMobileSmall{
+	width: 100%;
+}
+
 .CatalogSection {
 	margin-top: 170px;
 }
@@ -39,6 +44,11 @@
 .CardImage {
 }
 /* media queries */
+@media (max-width: 767px) {
+	.BannerlargeScreen{
+		width: 767px;
+	}
+}
 @media (max-width: 320px) {
 	.HeroPaper {
 		display: none;
@@ -75,7 +85,9 @@
 }
 
 @media (max-width: 412px) {
-	/* hidden selectors */
+	.HeroForMobileSmall{
+		display: block;
+	}
 	.HeroPaper {
 		display: none;
 	}
