@@ -11,6 +11,9 @@
 	display: none;
 }
 
+.banner {
+	display: none;
+}
 .CatalogSection {
 	margin-top: 170px;
 }
@@ -66,10 +69,9 @@
 	.ItemCard {
 		width: 260px;
 	}
-	.CardImage{
+	.CardImage {
 		height: 270px;
 	}
-	
 }
 
 @media (max-width: 412px) {

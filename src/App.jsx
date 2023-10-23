@@ -8,7 +8,6 @@ import { Paper } from "@mui/material";
 
 import DesktopNavBar from "./Navigation/DesktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
-import Category from "./HeroSection/CategorySection/Category";
 import MainSection from "./HeroSection/MainSection";
 import Hero from "./HeroSectionMobileSmall/Hero/BannerMobileSmall";
 import MainCatalog from "./Catalog/MainCatalog";
@@ -29,7 +28,6 @@ function App() {
 			</nav>
 			<section className="HeroSection">
 				<Paper elevation={1} className="HeroPaper">
-					<Category />
 					<MainSection />
 				</Paper>
 				<Hero />

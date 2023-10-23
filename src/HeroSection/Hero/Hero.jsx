@@ -1,8 +1,9 @@
 import CardMedia from "@mui/material/CardMedia";
-import Card from "@mui/material/Card"
+import Card from "@mui/material/Card";
 export default function Hero() {
-	return <div>
-        <Card
+	return (
+		<div>
+			<Card
 				mt={2}
 				sx={{
 					width: "100%",
@@ -14,9 +15,10 @@ export default function Hero() {
 				<CardMedia
 					component="img"
 					height="320"
-					image="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355415646.jpg"
-					alt="Paella dish"
+					image="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355513337.jpg"
+					alt="Tomus slippers"
 				/>
 			</Card>
-    </div>;
+		</div>
+	);
 }
