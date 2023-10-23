@@ -1,5 +1,9 @@
-.HeroSection {
-	/* margin-top: 3rem; */
+.LargeScreenBanner {
+	display: flex;
+}
+
+.MediumScreen {
+	display: none;
 }
 
 .HeroPaper {
@@ -45,11 +49,18 @@
 }
 /* media queries */
 @media (max-width: 767px) {
-	.CatalogSection{
+	.LargeScreenBanner {
+		display: none;
+	}
+	.MediumScreen {
+		display: block;
+	}
+
+	.CatalogSection {
 		margin-top: 30px;
 	}
 
-	.ItemCard{
+	.ItemCard {
 		width: 350px;
 		margin-bottom: 20px;
 	}
@@ -58,13 +69,11 @@
 		height: 360px;
 	}
 
-	.TaglineWrapper{
+	.TaglineWrapper {
 		padding-top: 50px;
 		/* margin-top: 50px; */
 		padding-left: 300px;
-		
 	}
-
 }
 @media (max-width: 320px) {
 	.HeroPaper {
@@ -86,11 +95,17 @@
 	} */
 }
 
-/* @media (max-width: 375px) {
-	.ItemCard {
-		max-width: 0px;
+@media (max-width: 644px) {
+	.banner {
+		margin-top: 0px;
 	}
-} */
+
+	.TaglineWrapper {
+		padding-top: 50px;
+		/* margin-top: 50px; */
+		padding-left: 250px;
+	}
+}
 
 @media (max-width: 376px) {
 	.ItemCard {
@@ -101,8 +116,35 @@
 	}
 }
 
+@media (max-width: 659px) {
+	.BannerlargeScreen {
+		display: none;
+	}
+	.banner {
+		display: block;
+	}
+
+	.ItemCard {
+		width: 350px;
+		margin-bottom: 20px;
+	}
+
+	.CardImage {
+		height: 360px;
+	}
+
+	.CatalogSection {
+		display: block;
+		height: 100%;
+	}
+	.caption {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
 @media (max-width: 412px) {
-	.BannerlargeScreen{
+	.BannerlargeScreen {
 		display: none;
 	}
 	.banner {

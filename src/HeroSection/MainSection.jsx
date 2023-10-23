@@ -1,6 +1,12 @@
-import Hero from "./Hero/Hero";
+import HeroMediumScreen from "./Hero/HeroMediumScreen";
+import HeroLargeScreen from "./Hero/HeroLargeScreen";
 
 import "./HeroSection.css";
 export default function MainSection() {
-	return <Hero />;
+	return (
+		<div className="LargeScreenBanner">
+			<HeroMediumScreen />
+			<HeroLargeScreen />
+		</div>
+	);
 }

@@ -4,7 +4,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
 import "./Navigation/Styles/SwitchScreen.css";
-import { Paper } from "@mui/material";
+import HeroMediumScreen from "./HeroSection/Hero/HeroMediumScreen"
 
 import DesktopNavBar from "./Navigation/DesktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
@@ -28,11 +28,19 @@ function App() {
 			</nav>
 			<section className="HeroSection">
 				<MainSection />
+				<div className="MediumScreen">
+					<HeroMediumScreen />
+				</div>
 				<Hero />
 			</section>
 
 			<section className="CatalogSection">
-				<Typography className="catalogTitle">Explore <b><i>collections</i></b></Typography>
+				<Typography className="catalogTitle">
+					Explore{" "}
+					<b>
+						<i>collections</i>
+					</b>
+				</Typography>
 				<MainCatalog />
 			</section>
 			<section className="FirstDiscovery">
