@@ -35,7 +35,11 @@
 }
 
 .CatalogSection {
-	margin-top: 170px;
+	margin-top: 100px;
+}
+
+.MainCatalog{
+
 }
 
 .caption {
@@ -43,7 +47,13 @@
 
 .ItemCard {
 	position: relative;
+	width: 300px;
 }
+
+.CardImage {
+	height: 310px;
+}
+
 .catalogTitle {
 	text-align: center;
 }
@@ -58,7 +68,20 @@
 
 .CardImage {
 }
+
+
+
 /* media queries */
+@media (max-width: 1009px) {
+    .BannerlargeScreen{
+		display: none;
+	}
+
+	.BannerlargeScreenImage{
+		width: 50%;
+	}
+}
+
 @media (max-width: 767px) {
 	.LargeScreenBanner {
 		display: none;
@@ -160,6 +183,10 @@
 	}
 	.banner {
 		display: block;
+	}
+
+	.CatalogSection{
+		margin-top: 180px;
 	}
 
 	.ItemCard {
