@@ -38,8 +38,7 @@
 	margin-top: 100px;
 }
 
-.MainCatalog{
-
+.MainCatalog {
 }
 
 .caption {
@@ -66,9 +65,9 @@
 	color: #872eb0;
 }
 
-.CallToAction{
+.CallToAction {
 	position: relative;
-	margin-top: 200px;
+	margin-top: 190px;
 	margin-left: 170px;
 }
 
@@ -76,19 +75,37 @@
 	color: #872eb0;
 }
 
+.FirstDiscovery {
+	display: flex;
+	width: 100%;
+}
+
+.FirstDisc1 {
+	width: 60%;
+}
+
+.FirstDisc2{
+	width: 50%;
+	height: 1500px;
+	padding: 2rem;
+	background-color: white;
+}
+
+.FirstDisc2tagline{
+	margin-top: 8rem;
+}
+
 .SecondDiscCard {
 	position: absolute;
 }
 
-
-
 /* media queries */
 @media (max-width: 1009px) {
-    .BannerlargeScreen{
+	.BannerlargeScreen {
 		display: none;
 	}
 
-	.BannerlargeScreenImage{
+	.BannerlargeScreenImage {
 		width: 50%;
 	}
 }
@@ -103,7 +120,7 @@
 
 	.CatalogSection {
 		margin-top: 30px;
-	} 
+	}
 
 	.ItemCard {
 		width: 350px;
@@ -196,7 +213,7 @@
 		display: block;
 	}
 
-	.CatalogSection{
+	.CatalogSection {
 		margin-top: 180px;
 	}
 
