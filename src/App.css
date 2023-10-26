@@ -66,7 +66,18 @@
 	color: #872eb0;
 }
 
-.CardImage {
+.CallToAction{
+	position: relative;
+	margin-top: 200px;
+	margin-left: 170px;
+}
+
+.CallToAction h3 {
+	color: #872eb0;
+}
+
+.SecondDiscCard {
+	position: absolute;
 }
 
 
@@ -92,7 +103,7 @@
 
 	.CatalogSection {
 		margin-top: 30px;
-	}
+	} 
 
 	.ItemCard {
 		width: 350px;
