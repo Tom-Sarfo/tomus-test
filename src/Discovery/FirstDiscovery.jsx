@@ -1,5 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Tagline from "../Common/Tagline/Tagline";
+import { data } from "../Common/Tagline/TaglineData";
 
 export default function FirstDiscovery() {
 	return (
@@ -12,25 +14,7 @@ export default function FirstDiscovery() {
 			</section>
 
 			<section className="FirstDisc2">
-				{/* use reusable components instead */}
-				<div className="FirstDisc2tagline">
-					<Typography variant="h2" component="h2">
-						<b>
-							Your <br />
-							Smile is our <br />
-							KPI
-						</b>
-					</Typography>
-					<br />
-					<Button
-						variant="contained"
-						href="#contained-buttons"
-						className="HeroBtn"
-						sx={{ bgcolor: "white", color: "#904B88" }}
-					>
-						Shop Now
-					</Button>
-				</div>
+				<Tagline section={data.FirstDiscovery}/>
 			</section>
 		</div>
 	);

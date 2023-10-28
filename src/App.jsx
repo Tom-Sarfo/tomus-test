@@ -7,7 +7,6 @@ import "./Navigation/Styles/SwitchScreen.css";
 import HeroMediumScreen from "./HeroSection/Hero/HeroMediumScreen";
 
 import DesktopNavBar from "./Navigation/DesktopNavBar";
-import CallToAction from "./CallToAction";
 import MobileNavbar from "./Navigation/MobileNavBar";
 import MainSection from "./HeroSection/MainSection";
 import Hero from "./HeroSectionMobileSmall/Hero/BannerMobileSmall";
@@ -16,6 +15,8 @@ import FirstDiscovery from "./Discovery/FirstDiscovery";
 import SecondDiscovery from "./Discovery/SecondDiscovery";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
+import Tagline from "./Common/Tagline/Tagline";
+import { data } from "./Common/Tagline/TaglineData";
 
 function App() {
 	return (
@@ -53,7 +54,7 @@ function App() {
 				</section>
 				<section className="SecondDiscovery">
 					<SecondDiscovery />
-					<CallToAction />
+					<Tagline section={data.SecondDiscovery}/>
 				</section>
 			</Stack>
 

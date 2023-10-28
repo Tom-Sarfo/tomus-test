@@ -65,13 +65,13 @@
 	color: #872eb0;
 }
 
-.CallToAction {
+.SecondDiscoveryTag {
 	position: relative;
 	margin-top: 190px;
 	margin-left: 170px;
 }
 
-.CallToAction h3 {
+.SecondDiscoveryTag h3 {
 	color: #872eb0;
 }
 
@@ -84,14 +84,14 @@
 	width: 60%;
 }
 
-.FirstDisc2{
+.FirstDisc2 {
 	width: 50%;
-	height: 1500px;
+	height: 1450px;
 	padding: 2rem;
 	background-color: white;
 }
 
-.FirstDisc2tagline{
+.FirstDisc2tagline {
 	margin-top: 8rem;
 }
 
@@ -99,8 +99,34 @@
 	position: absolute;
 }
 
+.SecondDiscInner {
+	display: flex;
+	width: 100%;
+}
+
+.firstDiscImg {
+	width: 70%;
+}
+
+.secondDiscImg {
+	width: 40%;
+	margin-left: 80px;
+}
+
 /* media queries */
 @media (max-width: 1009px) {
+	.FirstDisc2 {
+		display: none;
+	}
+
+	.FirstDisc1 {
+		width: 100%;
+	}
+	
+	.firstDiscImg {
+		width: 100%;
+	}
+
 	.BannerlargeScreen {
 		display: none;
 	}
