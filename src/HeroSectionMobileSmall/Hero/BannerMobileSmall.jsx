@@ -8,7 +8,7 @@ import {data} from "../../Common/Tagline/TaglineData";
 export default function Hero() {
 	return (
 		<div className="banner">
-			<Tagline section={data.SecondDiscovery}/>
+			<Tagline section={data.Banner}/>
 			<Card
 				sx={{
 					width: "100%",

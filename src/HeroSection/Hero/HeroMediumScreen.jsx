@@ -5,7 +5,7 @@ export default function Hero() {
 	return (
 		<div className="BannerlargeScreen">
 			<div className="TaglineWrapper">
-				<Tagline section={data.SecondDiscovery}/>
+				<Tagline section={data.Banner}/>
 			</div>
 			<Card
 				mt={2}

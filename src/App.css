@@ -13,6 +13,10 @@
 	margin-left: 500px;
 }
 
+.fDbannerImg{
+	width: 700px;
+}
+
 .MediumScreen {
 	display: none;
 }
@@ -115,14 +119,24 @@
 
 /* media queries */
 @media (max-width: 1009px) {
+	.fDbannerImg {
+		width: 400px;
+	}
+
+	.FirstDisc2tagline {
+		margin-top: 0px;
+		padding: 0.5rem;
+	}
+
 	.TagContainer {
 		display: none;
 	}
 
-	.FirstDisc1 {
-		width: 300px;
+	.FirstDisc2 {
+		/* width: 60px; */
+		/* background-color: red; */
 	}
-	
+
 	.firstDiscImg {
 		width: 100%;
 	}
@@ -163,46 +177,6 @@
 		padding-left: 300px;
 	}
 }
-@media (max-width: 320px) {
-	.HeroPaper {
-		display: none;
-	}
-	.ItemCard {
-		max-width: 250px;
-	}
-	.CatalogSection {
-		display: block;
-		height: 100%;
-	}
-	.caption {
-		display: flex;
-		justify-content: space-between;
-	}
-	/* .Tagline{
-		margin-right: 0px;
-	} */
-}
-
-@media (max-width: 644px) {
-	.banner {
-		margin-top: 0px;
-	}
-
-	.TaglineWrapper {
-		padding-top: 50px;
-		/* margin-top: 50px; */
-		padding-left: 250px;
-	}
-}
-
-@media (max-width: 376px) {
-	.ItemCard {
-		width: 260px;
-	}
-	.CardImage {
-		height: 270px;
-	}
-}
 
 @media (max-width: 659px) {
 	.BannerlargeScreen {
@@ -231,7 +205,33 @@
 	}
 }
 
+@media (max-width: 644px) {
+	.fDbannerImg{
+		width: 300px;
+	}
+
+	.banner {
+		margin-top: 0px;
+	}
+
+	.TaglineWrapper {
+		padding-top: 50px;
+		/* margin-top: 50px; */
+		padding-left: 250px;
+	}
+}
+
+@media (max-width: 503px){
+	.fDbannerImg{
+		width: 250px;
+	}
+}
+
 @media (max-width: 412px) {
+	.fDbannerImg {
+		width: 230px;
+	}
+
 	.BannerlargeScreen {
 		display: none;
 	}
@@ -255,5 +255,42 @@
 	.caption {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	@media (max-width: 376px) {
+		.fDbannerImg{
+			width: 190px;
+		}
+
+		.ItemCard {
+			width: 260px;
+		}
+		.CardImage {
+			height: 270px;
+		}
+	}
+
+	@media (max-width: 320px) {
+		.fDbannerImg {
+			width: 190px;
+		}
+
+		.HeroPaper {
+			display: none;
+		}
+		.ItemCard {
+			max-width: 250px;
+		}
+		.CatalogSection {
+			display: block;
+			height: 100%;
+		}
+		.caption {
+			display: flex;
+			justify-content: space-between;
+		}
+		/* .Tagline{
+			margin-right: 0px;
+		} */
 	}
 }

@@ -20,7 +20,7 @@ export const data = {
 				{ thirdline: "KPI" },
 			],
 		},
-		{ typoVariant: "h2" },
+		{ typoVariant: "h4" },
 		{ btnText: "Shop Now" },
 		{ className: "FirstDisc2tagline" },
 		{ bgcolor: "white", color: "#904B88" },

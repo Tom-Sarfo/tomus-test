@@ -8,6 +8,7 @@ export default function FirstDiscovery() {
 				<img
 					src="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355513267.jpg"
 					alt="Tomus footwear"
+					className="fDbannerImg"
 				/>
 			</section>
 
