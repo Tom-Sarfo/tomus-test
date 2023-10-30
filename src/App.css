@@ -117,6 +117,23 @@
 	margin-left: 80px;
 }
 
+.Footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #F2EDE9;
+	height: 200px;
+	margin-top: 10rem;
+	padding: 0.5rem;
+}
+
+.Icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem;
+}
 /* media queries */
 @media (max-width: 1009px) {
 	.fDbannerImg {

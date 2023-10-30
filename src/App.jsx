@@ -17,6 +17,7 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Tagline from "./Common/Tagline/Tagline";
 import { data } from "./Common/Tagline/TaglineData";
+import Footer from "./Footer/Footer";
 
 function App() {
 	return (
@@ -58,8 +59,7 @@ function App() {
 				</section>
 			</Stack>
 
-			<div>Tomus is back</div>
-			{/* <Button type="primary">Add</Button> */}
+			<Footer />
 		</>
 	);
 }
