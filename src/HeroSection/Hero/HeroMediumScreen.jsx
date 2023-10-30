@@ -1,11 +1,11 @@
-import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
-import Tagline from "../Tagline";
+import Tagline from "../../Common/Tagline/Tagline";
+import  {data} from "../../Common/Tagline/TaglineData"
 export default function Hero() {
 	return (
 		<div className="BannerlargeScreen">
 			<div className="TaglineWrapper">
-				<Tagline />
+				<Tagline section={data.SecondDiscovery}/>
 			</div>
 			<Card
 				mt={2}

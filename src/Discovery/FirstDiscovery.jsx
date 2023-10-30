@@ -1,5 +1,3 @@
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Tagline from "../Common/Tagline/Tagline";
 import { data } from "../Common/Tagline/TaglineData";
 

@@ -1,6 +1,3 @@
-import CardMedia from "@mui/material/CardMedia";
-import Card from "@mui/material/Card";
-import Tagline from "../Tagline";
 export default function Hero() {
 	return (
 		<div className="BannerlargeScreen">

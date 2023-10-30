@@ -1,5 +1,3 @@
-import CardMedia from "@mui/material/CardMedia";
-import Card from "@mui/material/Card";
 export default function Hero() {
 	return (
 		<div className="BannerlargeScreen1">

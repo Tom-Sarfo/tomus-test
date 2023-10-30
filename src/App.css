@@ -84,7 +84,7 @@
 	width: 60%;
 }
 
-.FirstDisc2 {
+.TagContainer {
 	width: 50%;
 	height: 1450px;
 	padding: 2rem;
@@ -115,12 +115,12 @@
 
 /* media queries */
 @media (max-width: 1009px) {
-	.FirstDisc2 {
+	.TagContainer {
 		display: none;
 	}
 
 	.FirstDisc1 {
-		width: 100%;
+		width: 300px;
 	}
 	
 	.firstDiscImg {

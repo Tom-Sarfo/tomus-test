@@ -1,14 +1,14 @@
 import CardMedia from "@mui/material/CardMedia";
 import "../HeroSection.css";
 import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Tagline from "../../HeroSection/Tagline";
+import Tagline from "../../Common/Tagline/Tagline";
+import {data} from "../../Common/Tagline/TaglineData";
+
 
 export default function Hero() {
 	return (
 		<div className="banner">
-			<Tagline />
+			<Tagline section={data.SecondDiscovery}/>
 			<Card
 				sx={{
 					width: "100%",
