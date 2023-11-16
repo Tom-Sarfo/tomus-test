@@ -69,15 +69,22 @@
 	color: #872eb0;
 }
 
-.SecondDiscoveryTag {
-	position: relative;
-	margin-top: 190px;
-	margin-left: 170px;
+.SecondDiscovery{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	/* min-height: 150px; */
+	background-color: #F2EDE9;
 }
 
-.SecondDiscoveryTag h3 {
+.SecondDiscoveryTag {
+	position: relative;
 	color: #872eb0;
+	padding: 5rem;
+	/* height: 150px; */
+	
 }
+
 
 .FirstDiscovery {
 	display: flex;
@@ -86,6 +93,14 @@
 
 .FirstDisc1 {
 	width: 60%;
+}
+
+.SecondDisc2 {
+	/* width: 80%; */
+}
+.SecondDisc1 {
+	/* width: 35%; */
+	margin-right: 0px;
 }
 
 .TagContainer {
@@ -97,6 +112,7 @@
 
 .FirstDisc2tagline {
 	margin-top: 8rem;
+	color: #872eb0;
 }
 
 .SecondDiscCard {
@@ -109,7 +125,7 @@
 }
 
 .firstDiscImg {
-	width: 70%;
+	/* width: 70%; */
 }
 
 .secondDiscImg {

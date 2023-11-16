@@ -15,8 +15,6 @@ import FirstDiscovery from "./Discovery/FirstDiscovery";
 import SecondDiscovery from "./Discovery/SecondDiscovery";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import Tagline from "./Common/Tagline/Tagline";
-import { data } from "./Common/Tagline/TaglineData";
 import Footer from "./Footer/Footer";
 
 function App() {
@@ -55,7 +53,6 @@ function App() {
 				</section>
 				<section className="SecondDiscovery">
 					<SecondDiscovery />
-					<Tagline section={data.SecondDiscovery}/>
 				</section>
 			</Stack>
 
