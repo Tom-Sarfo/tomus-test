@@ -1,10 +1,24 @@
 .LargeScreenBanner {
 	display: flex;
 	width: 100%;
+	background-color: #F2EDE9;
 }
 .BannerlargeScreen1 {
-	margin-top: -87px;
+	/* margin-top: -87px; */
 	position: relative;
+	/* width: 40%; */
+}
+
+.BannerlargeScreen{
+	width: 60%;
+}
+.HeroFirstColumn{
+ display: flex;
+ flex-direction: column;
+}
+.Tagline1{
+	color: #872eb0;
+	padding: 6rem;
 }
 
 .TaglineWrapperLScreen {
@@ -39,7 +53,8 @@
 }
 
 .CatalogSection {
-	margin-top: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .MainCatalog {
@@ -69,15 +84,22 @@
 	color: #872eb0;
 }
 
-.SecondDiscoveryTag {
-	position: relative;
-	margin-top: 190px;
-	margin-left: 170px;
+.SecondDiscovery{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	/* min-height: 150px; */
+	background-color: #F2EDE9;
 }
 
-.SecondDiscoveryTag h3 {
+.SecondDiscoveryTag {
+	position: relative;
 	color: #872eb0;
+	padding: 4rem;
+	/* height: 150px; */
+	
 }
+
 
 .FirstDiscovery {
 	display: flex;
@@ -86,6 +108,14 @@
 
 .FirstDisc1 {
 	width: 60%;
+}
+
+.SecondDisc2 {
+	/* width: 80%; */
+}
+.SecondDisc1 {
+	/* width: 35%; */
+	margin-right: 0px;
 }
 
 .TagContainer {
@@ -97,6 +127,7 @@
 
 .FirstDisc2tagline {
 	margin-top: 8rem;
+	color: #872eb0;
 }
 
 .SecondDiscCard {
@@ -109,7 +140,7 @@
 }
 
 .firstDiscImg {
-	width: 70%;
+	width:1000px;
 }
 
 .secondDiscImg {
@@ -126,6 +157,7 @@
 	height: 200px;
 	margin-top: 10rem;
 	padding: 0.5rem;
+	color: #872eb0;
 }
 
 .Icons{
@@ -135,6 +167,28 @@
 	padding: 5rem;
 }
 /* media queries */
+@media (max-width: 1420px) {
+	.BannerlargeScreen{
+		width: 80%;
+	}
+	.SecondDiscoveryTag {
+		padding: 3rem;
+		
+	}
+	.SecondDiscoveryTag h2{
+		
+	}
+	.firstDiscImg {
+		width:600px;
+	}
+	.BannerlargeScreen {
+		display: none;
+	}
+	.TaglineWrapperLScreen {
+		margin-left: 600px;
+	}
+
+}
 @media (max-width: 1009px) {
 	.fDbannerImg {
 		width: 400px;
@@ -150,16 +204,26 @@
 	}
 
 	.FirstDisc2 {
-		/* width: 60px; */
-		/* background-color: red; */
+		
 	}
 
 	.firstDiscImg {
 		width: 100%;
 	}
 
+	.SecondDiscoveryTag {
+		padding: 4rem;
+		
+	}
+	.SecondDiscoveryTag h2{
+		/* font-size:large; */
+	}
+
 	.BannerlargeScreen {
 		display: none;
+	}
+	.TaglineWrapperLScreen {
+		margin-left: 400px;
 	}
 
 	.BannerlargeScreenImage {
@@ -168,7 +232,7 @@
 }
 
 @media (max-width: 767px) {
-	.LargeScreenBanner {
+	.BannerlargeScreen {
 		display: none;
 	}
 	.MediumScreen {
@@ -188,15 +252,18 @@
 		height: 360px;
 	}
 
-	.TaglineWrapper {
-		padding-top: 50px;
-		/* margin-top: 50px; */
-		padding-left: 300px;
+	.TaglineWrapperLScreen {
+		margin-left: 300px;
 	}
+	
+
 }
 
 @media (max-width: 659px) {
-	.BannerlargeScreen {
+	.LargeScreenBanner {
+		display: none;
+	}
+	.Tagline1{
 		display: none;
 	}
 	.banner {
@@ -230,6 +297,12 @@
 	.banner {
 		margin-top: 0px;
 	}
+	.SecondDiscoveryTag {
+		padding: 3rem;
+	}
+	.SecondDiscoveryTag h2{
+		/* font-size:large; */
+	}
 
 	.TaglineWrapper {
 		padding-top: 50px;
@@ -241,6 +314,16 @@
 @media (max-width: 503px){
 	.fDbannerImg{
 		width: 250px;
+	}
+
+	.SecondDiscoveryTag {
+		padding: 2rem;
+	}
+	.SecondDiscoveryTag h2{
+		font-size:large;
+	}
+	.FirstDisc2tagline h2{
+		font-size: large;
 	}
 }
 
@@ -268,6 +351,18 @@
 	.CatalogSection {
 		display: block;
 		height: 100%;
+	}
+	.SecondDiscoveryTag {
+		padding: 1.5rem;
+		/* font-size: 10px; */
+		/* height: 150px; */
+		
+	}
+	.SecondDiscoveryTag h2{
+		font-size:large;
+	}
+	.SecondDiscovery{
+		/* height: 258px; */
 	}
 	.caption {
 		display: flex;
@@ -302,6 +397,16 @@
 			display: block;
 			height: 100%;
 		}
+		.SecondDiscoveryTag {
+			padding: 1rem;
+			/* font-size: 10px; */
+			/* height: 150px; */
+			
+		}
+		.SecondDiscoveryTag h2{
+			font-size:large;
+		}
+		
 		.caption {
 			display: flex;
 			justify-content: space-between;

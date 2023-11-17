@@ -6,7 +6,10 @@ import Tagline from "../Common/Tagline/Tagline";
 export default function MainSection() {
 	return (
 		<div className="LargeScreenBanner">
+			<div className="HeroFirstColumn" >
 			<HeroLargeScreen1 />
+			<Tagline section={data.Banner1}/>
+			</div>
 			<div className="TaglineWrapperLScreen">
 				<Tagline section={data.Banner}/>
 			</div>
