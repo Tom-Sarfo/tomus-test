@@ -125,7 +125,7 @@
 }
 
 .firstDiscImg {
-	/* width: 70%; */
+	width:1000px;
 }
 
 .secondDiscImg {
@@ -151,6 +151,19 @@
 	padding: 5rem;
 }
 /* media queries */
+@media (max-width: 1420px) {
+	.SecondDiscoveryTag {
+		padding: 3rem;
+		
+	}
+	.SecondDiscoveryTag h2{
+		
+	}
+	.firstDiscImg {
+		width:600px;
+	}
+
+}
 @media (max-width: 1009px) {
 	.fDbannerImg {
 		width: 400px;
@@ -166,12 +179,19 @@
 	}
 
 	.FirstDisc2 {
-		/* width: 60px; */
-		/* background-color: red; */
+		
 	}
 
 	.firstDiscImg {
 		width: 100%;
+	}
+
+	.SecondDiscoveryTag {
+		padding: 4rem;
+		
+	}
+	.SecondDiscoveryTag h2{
+		/* font-size:large; */
 	}
 
 	.BannerlargeScreen {
@@ -246,6 +266,12 @@
 	.banner {
 		margin-top: 0px;
 	}
+	.SecondDiscoveryTag {
+		padding: 3rem;
+	}
+	.SecondDiscoveryTag h2{
+		/* font-size:large; */
+	}
 
 	.TaglineWrapper {
 		padding-top: 50px;
@@ -257,6 +283,13 @@
 @media (max-width: 503px){
 	.fDbannerImg{
 		width: 250px;
+	}
+
+	.SecondDiscoveryTag {
+		padding: 2rem;
+	}
+	.SecondDiscoveryTag h2{
+		font-size:large;
 	}
 }
 
@@ -284,6 +317,18 @@
 	.CatalogSection {
 		display: block;
 		height: 100%;
+	}
+	.SecondDiscoveryTag {
+		padding: 1.5rem;
+		/* font-size: 10px; */
+		/* height: 150px; */
+		
+	}
+	.SecondDiscoveryTag h2{
+		font-size:large;
+	}
+	.SecondDiscovery{
+		/* height: 258px; */
 	}
 	.caption {
 		display: flex;
@@ -318,6 +363,16 @@
 			display: block;
 			height: 100%;
 		}
+		.SecondDiscoveryTag {
+			padding: 1rem;
+			/* font-size: 10px; */
+			/* height: 150px; */
+			
+		}
+		.SecondDiscoveryTag h2{
+			font-size:large;
+		}
+		
 		.caption {
 			display: flex;
 			justify-content: space-between;
