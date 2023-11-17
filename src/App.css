@@ -1,10 +1,24 @@
 .LargeScreenBanner {
 	display: flex;
 	width: 100%;
+	background-color: #F2EDE9;
 }
 .BannerlargeScreen1 {
-	margin-top: -87px;
+	/* margin-top: -87px; */
 	position: relative;
+	/* width: 40%; */
+}
+
+.BannerlargeScreen{
+	width: 60%;
+}
+.HeroFirstColumn{
+ display: flex;
+ flex-direction: column;
+}
+.Tagline1{
+	color: #872eb0;
+	padding: 6rem;
 }
 
 .TaglineWrapperLScreen {
@@ -39,7 +53,8 @@
 }
 
 .CatalogSection {
-	margin-top: 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .MainCatalog {
@@ -80,7 +95,7 @@
 .SecondDiscoveryTag {
 	position: relative;
 	color: #872eb0;
-	padding: 5rem;
+	padding: 4rem;
 	/* height: 150px; */
 	
 }
@@ -142,6 +157,7 @@
 	height: 200px;
 	margin-top: 10rem;
 	padding: 0.5rem;
+	color: #872eb0;
 }
 
 .Icons{
@@ -152,6 +168,9 @@
 }
 /* media queries */
 @media (max-width: 1420px) {
+	.BannerlargeScreen{
+		width: 80%;
+	}
 	.SecondDiscoveryTag {
 		padding: 3rem;
 		
@@ -161,6 +180,12 @@
 	}
 	.firstDiscImg {
 		width:600px;
+	}
+	.BannerlargeScreen {
+		display: none;
+	}
+	.TaglineWrapperLScreen {
+		margin-left: 600px;
 	}
 
 }
@@ -197,6 +222,9 @@
 	.BannerlargeScreen {
 		display: none;
 	}
+	.TaglineWrapperLScreen {
+		margin-left: 400px;
+	}
 
 	.BannerlargeScreenImage {
 		width: 50%;
@@ -204,7 +232,7 @@
 }
 
 @media (max-width: 767px) {
-	.LargeScreenBanner {
+	.BannerlargeScreen {
 		display: none;
 	}
 	.MediumScreen {
@@ -224,15 +252,18 @@
 		height: 360px;
 	}
 
-	.TaglineWrapper {
-		padding-top: 50px;
-		/* margin-top: 50px; */
-		padding-left: 300px;
+	.TaglineWrapperLScreen {
+		margin-left: 300px;
 	}
+	
+
 }
 
 @media (max-width: 659px) {
-	.BannerlargeScreen {
+	.LargeScreenBanner {
+		display: none;
+	}
+	.Tagline1{
 		display: none;
 	}
 	.banner {
@@ -290,6 +321,9 @@
 	}
 	.SecondDiscoveryTag h2{
 		font-size:large;
+	}
+	.FirstDisc2tagline h2{
+		font-size: large;
 	}
 }
 

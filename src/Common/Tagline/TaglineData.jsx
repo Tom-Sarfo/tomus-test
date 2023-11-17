@@ -12,6 +12,19 @@ export const data = {
 		{ className: "Tagline" },
 		{ bgcolor: "white", color: "#904B88" },
 	],
+	Banner1: [
+		{
+			title: [
+				{ firstline: "Craft" },
+				{ secondline: "that" },
+				{ thirdline: "fit your lifestyle" },
+			],
+		},
+		{ typoVariant: "h4" },
+		{ btnText: "Shop Now" },
+		{ className: "Tagline1" },
+		{ bgcolor: "white", color: "#904B88" },
+	],
 	FirstDiscovery: [
 		{
 			title: [
