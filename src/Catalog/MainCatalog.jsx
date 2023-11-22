@@ -1,16 +1,18 @@
 import { Typography } from "@mui/material";
-import ItemCard from "../ItemCard";
-import "./Catalog.css"
+import ItemCard from "../Common/ItemCard/ItemCard";
+import { ItemData } from "../Common/ItemCard/ItemCardData";
+import "./Catalog.css";
 
 export default function MainCatalog() {
-    const imgUrl1 = 'https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355464877.jpg';
-    const imgUrl2 = 'https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355477328.jpg'
-	return (
-		<div className="MainCatalog">
-			<ItemCard imgUrl={imgUrl1}/>
-			<ItemCard imgUrl={imgUrl2}/>
-            <ItemCard imgUrl={imgUrl1}/>
-			<ItemCard imgUrl={imgUrl2}/>
-		</div>
-	);
+  return (
+    <div className="MainCatalog">
+		{ ItemData?.map(data => (
+ 			<ItemCard key={data.prod_id} data={data} />
+		))} 
+     
+      {/* <ItemCard imgUrl={ItemData[0].imgUrl} />
+      <ItemCard imgUrl={ItemData[1].imgUrl} />
+      <ItemCard imgUrl={ItemData[0].imgUrl} /> */}
+    </div>
+  );
 }

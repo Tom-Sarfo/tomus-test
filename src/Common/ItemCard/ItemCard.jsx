@@ -3,30 +3,28 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea } from "@mui/material";
-import Favourite from "./Favourite";
+import Favourite from "../../Favourite";
 
-export default function ItemCard({ imgUrl }) {
+
+export default function ItemCard({data}) {
 	return (
 		<Card className="ItemCard">
 			<CardActionArea>
 				<CardMedia
 					component="img"
 					height="160"
-					image={imgUrl}
+					image={data.imgUrl}
 					alt="green iguana"
 					className="CardImage"
 				/>
-				<Favourite />
+				<Favourite data={data}/>
 				<CardContent>
-					{/* <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography> */}
 					<Typography height={30} variant="body2" color="text.secondary">
 						<div className="caption">
 							<Typography>
-								<b>Afro-G</b>
+								<b>{data.productName}</b>
 							</Typography>
-							<Typography>¢200</Typography>
+							<Typography>¢{data.productPrice}</Typography>
 						</div>
 					</Typography>
 				</CardContent>
@@ -39,6 +37,3 @@ export default function ItemCard({ imgUrl }) {
 		</Card>
 	);
 }
-
-// https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355464877.jpg
-// https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355477328.jpg
