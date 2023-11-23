@@ -16,189 +16,190 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 
 const Search = styled("div")(({ theme }) => ({
-	position: "relative",
-	borderRadius: theme.shape.borderRadius,
-	backgroundColor: alpha(theme.palette.common.white, 0.15),
-	"&:hover": {
-		backgroundColor: alpha(theme.palette.common.white, 0.25),
-	},
-	marginRight: theme.spacing(2),
-	marginLeft: 0,
-	width: "100%",
-	[theme.breakpoints.up("sm")]: {
-		marginLeft: theme.spacing(3),
-		width: "auto",
-	},
+  position: "relative",
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  "&:hover": {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginRight: theme.spacing(2),
+  marginLeft: 0,
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
+    marginLeft: theme.spacing(3),
+    width: "auto",
+  },
 }));
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
-	padding: theme.spacing(0, 2),
-	height: "100%",
-	position: "absolute",
-	pointerEvents: "none",
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
+  padding: theme.spacing(0, 2),
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-	color: "inherit",
-	"& .MuiInputBase-input": {
-		padding: theme.spacing(1, 1, 1, 0),
-		// vertical padding + font size from searchIcon
-		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-		transition: theme.transitions.create("width"),
-		width: "100%",
-		[theme.breakpoints.up("md")]: {
-			width: "20ch",
-		},
-	},
+  color: "inherit",
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "20ch",
+    },
+  },
 }));
 
 export default function DesktopNavBar() {
-	const [anchorEl, setAnchorEl] = React.useState(null);
-	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-	const isMenuOpen = Boolean(anchorEl);
-	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-	const handleProfileMenuOpen = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-	const handleMobileMenuClose = () => {
-		setMobileMoreAnchorEl(null);
-	};
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null);
+  };
 
-	const handleMenuClose = () => {
-		setAnchorEl(null);
-		handleMobileMenuClose();
-	};
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
 
-	const handleMobileMenuOpen = (event) => {
-		setMobileMoreAnchorEl(event.currentTarget);
-	};
+  const handleMobileMenuOpen = (event) => {
+    setMobileMoreAnchorEl(event.currentTarget);
+  };
 
-	const menuId = "primary-search-account-menu";
-	const renderMenu = (
-		<Menu
-			anchorEl={anchorEl}
-			anchorOrigin={{
-				vertical: "top",
-				horizontal: "right",
-			}}
-			id={menuId}
-			keepMounted
-			transformOrigin={{
-				vertical: "top",
-				horizontal: "right",
-			}}
-			open={isMenuOpen}
-			onClose={handleMenuClose}
-		>
-			<MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-			<MenuItem onClick={handleMenuClose}>My account</MenuItem>
-		</Menu>
-	);
+  const menuId = "primary-search-account-menu";
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+    </Menu>
+  );
 
-	const mobileMenuId = "primary-search-account-menu-mobile";
-	const renderMobileMenu = (
-		<Menu
-			anchorEl={mobileMoreAnchorEl}
-			anchorOrigin={{
-				vertical: "top",
-				horizontal: "right",
-			}}
-			id={mobileMenuId}
-			keepMounted
-			transformOrigin={{
-				vertical: "top",
-				horizontal: "right",
-			}}
-			open={isMobileMenuOpen}
-			onClose={handleMobileMenuClose}
-		>
-			<MenuItem>
-				<IconButton size="large" aria-label="show 4 new mails" color="inherit">
-					<Badge badgeContent={4} color="error">
-						<LocalMallIcon />
-					</Badge>
-				</IconButton>
-				<p>Messages</p>
-			</MenuItem>
-			<MenuItem>
-				<IconButton
-					size="large"
-					aria-label="show 17 new notifications"
-					color="inherit"
-				>
-					<Badge badgeContent={17} color="error">
-						<FavoriteIcon />
-					</Badge>
-				</IconButton>
-				<p>Notifications</p>
-			</MenuItem>
-			<MenuItem onClick={handleProfileMenuOpen}>
-				<IconButton
-					size="large"
-					aria-label="account of current user"
-					aria-controls="primary-search-account-menu"
-					aria-haspopup="true"
-					color="inherit"
-				>
-					<FavoriteIcon />
-				</IconButton>
-				<p>Profile</p>
-			</MenuItem>
-		</Menu>
-	);
+  const mobileMenuId = "primary-search-account-menu-mobile";
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <LocalMallIcon />
+          </Badge>
+        </IconButton>
+        <p>Messages</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+        >
+          <Badge badgeContent={17} color="error">
+            <FavoriteIcon />
+          </Badge>
+        </IconButton>
+        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <FavoriteIcon />
+        </IconButton>
+        <p>Profile</p>
+      </MenuItem>
+    </Menu>
+  );
 
-	return (
-		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position="fixed" sx={{ bgcolor: "white" }}>
-				<Toolbar>
-					<Typography
-						variant="h6"
-						noWrap
-						component="div"
-						sx={{ display: { xs: "none", sm: "block", color: "#872EB0" } }}
-					>
-						Tomus
-					</Typography>
-					<Search sx={{ color: "#872EB0" }}>
-						<SearchIconWrapper>
-							<SearchIcon />
-						</SearchIconWrapper>
-						<StyledInputBase
-							placeholder="Search…"
-							inputProps={{ "aria-label": "search" }}
-						/>
-					</Search>
-					<Box sx={{ flexGrow: 1 }} />
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="fixed" sx={{ bgcolor: "white" }}>
+        <Toolbar>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ display: { xs: "none", sm: "block", color: "#872EB0" } }}
+          >
+            Tomus
+          </Typography>
+          <Search sx={{ color: "#872EB0" }}>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ "aria-label": "search" }}
+            />
+          </Search>
+          <Box sx={{ flexGrow: 1 }} />
 
-					<Box
-						sx={{
-							display: { xs: "none", md: "flex" },
-						}}
-						style={{
-							display: "flex",
-							justifyContent: "space-between",
-							width: "20%",
-						}}
-					>
-						<Tooltip title="visit our store">
-							<IconButton
-								size="large"
-								aria-label="show 4 new mails"
-								color="inherit"
-							>
-								<LocalMallIcon />
-							</IconButton>
-						</Tooltip>
-						<IconButton
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+            }}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "20%",
+            }}
+          >
+            <Tooltip title="visit our store">
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <LocalMallIcon />
+              </IconButton>
+            </Tooltip>
+            {/* <IconButton
 							size="large"
 							aria-label="show 17 new notifications"
 							color="inherit"
@@ -207,12 +208,15 @@ export default function DesktopNavBar() {
 							<Badge badgeContent={17} color="error">
 								<FavoriteIcon sx={{ color: "#872EB0" }} />
 							</Badge>
-						</IconButton> 
-					</Box>
-				</Toolbar>
-			</AppBar>
-			{renderMobileMenu}
-			{renderMenu}
-		</Box>
-	);
+						</IconButton>  */}
+            <Button variant="contained" color="secondary" href="https://tomuswear.company.site/products">
+              view store
+            </Button>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
+    </Box>
+  );
 }

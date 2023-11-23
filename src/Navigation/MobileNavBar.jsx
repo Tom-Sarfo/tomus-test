@@ -11,6 +11,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import MenuItem from "@mui/material/MenuItem";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import Button from "@mui/material/Button"
 
 import Menu from "@mui/material/Menu";
 
@@ -61,12 +62,14 @@ export default function MobileNavBar() {
 								aria-label="account of current user"
 								aria-controls="menu-appbar"
 								aria-haspopup="true"
-								onClick={handleMenu}
+								// onClick={handleMenu}
 								sx={{color: "#872EB0"}}
 							>
-								<FavoriteIcon />
+								{/* <FavoriteIcon /> */}
+								<Button variant="contained" color="secondary" href="https://tomuswear.company.site/products">view store</Button>
 							</IconButton>
-							<Menu
+							{/* This will be needed for dropdown functionality */}
+							{/* <Menu
 								id="menu-appbar"
 								anchorEl={anchorEl}
 								anchorOrigin={{
@@ -83,7 +86,7 @@ export default function MobileNavBar() {
 							>
 								<MenuItem onClick={handleClose}>Profile</MenuItem>
 								<MenuItem onClick={handleClose}>My account</MenuItem>
-							</Menu>
+							</Menu> */}
 						</div>
 					)}
 				</Toolbar>
