@@ -190,9 +190,9 @@ export default function DesktopNavBar() {
             </Stack>
           </Box>
 		  <Box sx={{ flexGrow: 3 }} className="menuForMediumScreen" >
-            <Stack direction="row" spacing={4}>
-              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Men Slippers</Typography></Link>
-              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Ladies Slippers</Typography></Link>
+            <Stack direction="row" spacing={3}>
+              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Men </Typography></Link>
+              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Ladies</Typography></Link>
               <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Beads</Typography></Link>
             </Stack>
           </Box>
