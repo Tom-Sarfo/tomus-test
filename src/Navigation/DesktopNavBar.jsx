@@ -231,7 +231,7 @@ export default function DesktopNavBar() {
               color="secondary"
               href="https://tomuswear.company.site/products"
             >
-              view store
+              store
             </Button>
           </Box>
         </Toolbar>
