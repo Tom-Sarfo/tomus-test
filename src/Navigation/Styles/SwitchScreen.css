@@ -1,13 +1,13 @@
 .MobileNavBar {
-	visibility: hidden;
+	display: none;
 }
 
 @media (max-width: 670px) {
 	.DesktopNavBar {
-		visibility: hidden;
+		display: none;	
 	}
 
 	.MobileNavBar {
-		visibility: visible;
+		display: block;
 	}
 }

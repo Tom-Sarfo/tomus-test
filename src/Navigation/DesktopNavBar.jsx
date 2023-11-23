@@ -18,6 +18,10 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
+import Stack from "@mui/material/Stack";
+import { Link } from "@mui/material";
+import "../App.css"
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -178,7 +182,20 @@ export default function DesktopNavBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 3 }} className="menuForLargeScreen" >
+            <Stack direction="row" spacing={4}>
+              <Link href="#" underline="none" className="myItem"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "19px"}}>Men Slippers</Typography></Link>
+              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", }}>Ladies Slippers</Typography></Link>
+              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", }}>Beads</Typography></Link>
+            </Stack>
+          </Box>
+		  <Box sx={{ flexGrow: 3 }} className="menuForMediumScreen" >
+            <Stack direction="row" spacing={4}>
+              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Men Slippers</Typography></Link>
+              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Ladies Slippers</Typography></Link>
+              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Beads</Typography></Link>
+            </Stack>
+          </Box>
 
           <Box
             sx={{
@@ -209,7 +226,11 @@ export default function DesktopNavBar() {
 								<FavoriteIcon sx={{ color: "#872EB0" }} />
 							</Badge>
 						</IconButton>  */}
-            <Button variant="contained" color="secondary" href="https://tomuswear.company.site/products">
+            <Button
+              variant="contained"
+              color="secondary"
+              href="https://tomuswear.company.site/products"
+            >
               view store
             </Button>
           </Box>

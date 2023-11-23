@@ -76,6 +76,10 @@
   color: #872eb0;
 }
 
+.menuForMediumScreen{
+  display: none;
+}
+
 .SecondDiscovery {
   display: flex;
   justify-content: space-between;
@@ -205,6 +209,16 @@
 
   .BannerlargeScreenImage {
     width: 50%;
+  }
+}
+
+@media (max-width: 942px) {
+  .menuForLargeScreen{
+    display: none;
+  }
+
+  .menuForMediumScreen{
+    display: block;
   }
 }
 
