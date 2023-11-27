@@ -5,92 +5,88 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormGroup from "@mui/material/FormGroup";
-import MenuItem from "@mui/material/MenuItem";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import Button from "@mui/material/Button"
+import Button from "@mui/material/Button";
+import { styled, useTheme } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import List from "@mui/material/List";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+
 
 import Menu from "@mui/material/Menu";
 
 import "./Styles/Navigation.css";
 
 export default function MobileNavBar() {
-	const [auth, setAuth] = React.useState(true);
-	const [anchorEl, setAnchorEl] = React.useState(null);
+  const [auth, setAuth] = React.useState(true);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
 
-	const handleChange = (event) => {
-		setAuth(event.target.checked);
-	};
 
-	const handleMenu = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
+  const handleChange = (event) => {
+    setAuth(event.target.checked);
+  };
 
-	const handleClose = () => {
-		setAnchorEl(null);
-	};
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-	return (
-		<Box sx={{ flexGrow: 1 }}>
-			<AppBar
-				position="fixed"
-				className="MobileAppBar"
-				sx={{ bgcolor: "white" }}
-			>
-				<Toolbar>
-					<IconButton
-						size="large"
-						edge="start"
-						// color="inherit"
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-						aria-label="menu"
-						sx={{ mr: 2, color: "#872EB0"}}
-					>
-						<MenuIcon />
-					</IconButton>
-					<Box sx={{ flexGrow: 1 }} />
-					<Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#872EB0" }}>
-						Tomus
-					</Typography>
-					{auth && (
-						<div>
-							<IconButton
-								size="large"
-								aria-label="account of current user"
-								aria-controls="menu-appbar"
-								aria-haspopup="true"
-								// onClick={handleMenu}
-								sx={{color: "#872EB0"}}
-							>
-								{/* <FavoriteIcon /> */}
-								<Button variant="contained" color="secondary" href="https://tomuswear.company.site/products">view store</Button>
-							</IconButton>
-							{/* This will be needed for dropdown functionality */}
-							{/* <Menu
-								id="menu-appbar"
-								anchorEl={anchorEl}
-								anchorOrigin={{
-									vertical: "top",
-									horizontal: "right",
-								}}
-								keepMounted
-								transformOrigin={{
-									vertical: "top",
-									horizontal: "right",
-								}}
-								open={Boolean(anchorEl)}
-								onClose={handleClose}
-							>
-								<MenuItem onClick={handleClose}>Profile</MenuItem>
-								<MenuItem onClick={handleClose}>My account</MenuItem>
-							</Menu> */}
-						</div>
-					)}
-				</Toolbar>
-			</AppBar>
-		</Box>
-	);
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar
+        position="fixed"
+        className="MobileAppBar"
+        sx={{ bgcolor: "white" }}
+      >
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            // color="inherit"
+
+            aria-label="menu"
+            sx={{ mr: 2, color: "#872EB0" }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Box sx={{ flexGrow: 1 }} />
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, color: "#872EB0" }}
+          >
+            Tomus
+          </Typography>
+          {auth && (
+            <div>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                // onClick={handleMenu}
+                sx={{ color: "#872EB0" }}
+              >
+                {/* <FavoriteIcon /> */}
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  href="https://tomuswear.company.site/products"
+                >
+                  view store
+                </Button>
+              </IconButton>
+            </div>
+          )}
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
 }
