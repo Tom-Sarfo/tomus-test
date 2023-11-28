@@ -16,49 +16,55 @@ import SecondDiscovery from "./Discovery/SecondDiscovery";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Footer from "./Footer/Footer";
+import Drawer from "./Navigation/Menu/Drawer";
+import { useState } from "react";
 
 function App() {
-	return (
-		<>
-			<nav>
-				<div className="DesktopNavBar">
-					<DesktopNavBar />
-				</div>
+  const [openDrawer, setOpenDrawer] = useState(false);
 
-				<div className="MobileNavBar">
-					<MobileNavbar />
-				</div>
-			</nav>
-			<section className="HeroSection">
-				<MainSection />
-				<div className="MediumScreen">
-					<HeroMediumScreen />
-				</div>
-				<Hero />
-			</section>
+  return (
+    <>
+      <nav>
+        <div className="DesktopNavBar">
+          <DesktopNavBar />
+        </div>
 
-			<section className="CatalogSection">
-				<Typography className="catalogTitle">
-					Explore{" "}
-					<b>
-						<i>collections</i>
-					</b>
-				</Typography>
-				<MainCatalog />
-			</section>
+        <div className="MobileNavBar">
+          <MobileNavbar openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
+        </div>
+      </nav>
+      {/* <MenuDrawer/> */}
+      {openDrawer && <Drawer setOpenDrawer={setOpenDrawer} openDrawer={openDrawer} />}
+      <section className="HeroSection">
+        <MainSection />
+        <div className="MediumScreen">
+          <HeroMediumScreen />
+        </div>
+        <Hero />
+      </section>
 
-			<Stack spacing={4}>
-				<section className="FirstDiscovery">
-					<FirstDiscovery />
-				</section>
-				<section className="SecondDiscovery">
-					<SecondDiscovery />
-				</section>
-			</Stack>
+      <section className="CatalogSection">
+        <Typography className="catalogTitle">
+          Explore{" "}
+          <b>
+            <i>collections</i>
+          </b>
+        </Typography>
+        <MainCatalog />
+      </section>
 
-			<Footer />
-		</>
-	);
+      <Stack spacing={4}>
+        <section className="FirstDiscovery">
+          <FirstDiscovery />
+        </section>
+        <section className="SecondDiscovery">
+          <SecondDiscovery />
+        </section>
+      </Stack>
+
+      <Footer />
+    </>
+  );
 }
 
 export default App;

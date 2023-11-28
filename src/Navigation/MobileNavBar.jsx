@@ -17,9 +17,13 @@ import Menu from "@mui/material/Menu";
 
 import "./Styles/Navigation.css";
 
-export default function MobileNavBar() {
+export default function MobileNavBar({openDrawer, setOpenDrawer}) {
 	const [auth, setAuth] = React.useState(true);
 	const [anchorEl, setAnchorEl] = React.useState(null);
+
+	const showDrawer = () => {
+		setOpenDrawer(true);
+	};
 
 	const handleChange = (event) => {
 		setAuth(event.target.checked);
@@ -48,6 +52,7 @@ export default function MobileNavBar() {
 
 						aria-label="menu"
 						sx={{ mr: 2, color: "#872EB0"}}
+						onClick={showDrawer}
 					>
 						<MenuIcon />
 					</IconButton>
@@ -65,28 +70,8 @@ export default function MobileNavBar() {
 								// onClick={handleMenu}
 								sx={{color: "#872EB0"}}
 							>
-								{/* <FavoriteIcon /> */}
 								<Button variant="contained" color="secondary" href="https://tomuswear.company.site/products">view store</Button>
 							</IconButton>
-							{/* This will be needed for dropdown functionality */}
-							{/* <Menu
-								id="menu-appbar"
-								anchorEl={anchorEl}
-								anchorOrigin={{
-									vertical: "top",
-									horizontal: "right",
-								}}
-								keepMounted
-								transformOrigin={{
-									vertical: "top",
-									horizontal: "right",
-								}}
-								open={Boolean(anchorEl)}
-								onClose={handleClose}
-							>
-								<MenuItem onClick={handleClose}>Profile</MenuItem>
-								<MenuItem onClick={handleClose}>My account</MenuItem>
-							</Menu> */}
 						</div>
 					)}
 				</Toolbar>
