@@ -216,16 +216,7 @@ export default function DesktopNavBar() {
                 <LocalMallIcon />
               </IconButton>
             </Tooltip>
-            {/* <IconButton
-							size="large"
-							aria-label="show 17 new notifications"
-							color="inherit"
-							edge="end"
-						>
-							<Badge badgeContent={17} color="error">
-								<FavoriteIcon sx={{ color: "#872EB0" }} />
-							</Badge>
-						</IconButton>  */}
+            
             <Button
               variant="contained"
               color="secondary"
