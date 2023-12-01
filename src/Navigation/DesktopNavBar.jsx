@@ -252,6 +252,7 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
                 <LocalMallIcon />
               </IconButton>
             </Tooltip>
+            
             <Button
               variant="contained"
               color="secondary"
