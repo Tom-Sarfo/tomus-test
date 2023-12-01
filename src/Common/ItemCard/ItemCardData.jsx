@@ -4,3 +4,4 @@ export const ItemData = [
   { prod_id: 3, productName: "Tonto", productPrice: 154, imgUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355464877.jpg", fav: true },
   { prod_id: 4, productName: "Gyinaso", productPrice: 154, imgUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355464877.jpg", fav: false },
 ];
+

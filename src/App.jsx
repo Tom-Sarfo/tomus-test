@@ -18,23 +18,47 @@ import Stack from "@mui/material/Stack";
 import Footer from "./Footer/Footer";
 import Drawer from "./Navigation/Menu/Drawer";
 import { useState } from "react";
+import SearchSuggested from "./Navigation/Search/SearchSuggested";
+import Search from "./Navigation/Search/Search";
+import { ItemData } from "./Common/ItemCard/ItemCardData";
 
 function App() {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredData, setFilteredData] = useState([]);
+
+  function handleChange(e) {
+    setSearchTerm(e.target.value);
+    searchFilter(searchTerm);
+  }
+
+  const searchFilter = (searchTerm) => {
+    const search = ItemData.filter((item) => {
+      const searchKey = searchTerm?.toLowerCase();
+      return item.productName.toLowerCase().includes(searchKey);
+    });
+    setFilteredData(search);
+  };
+  console.log(filteredData);
 
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <nav>
         <div className="DesktopNavBar">
-          <DesktopNavBar />
+          <DesktopNavBar searchTerm={searchTerm} handleChange={handleChange} />
         </div>
-
         <div className="MobileNavBar">
           <MobileNavbar openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
         </div>
       </nav>
+      {filteredData.length !== 0 && searchTerm !== "" ? (
+        <SearchSuggested filteredData={filteredData} />
+      ) : null}
+
       {/* <MenuDrawer/> */}
-      {openDrawer && <Drawer setOpenDrawer={setOpenDrawer} openDrawer={openDrawer} />}
+      {openDrawer && (
+        <Drawer setOpenDrawer={setOpenDrawer} openDrawer={openDrawer} />
+      )}
       <section className="HeroSection">
         <MainSection />
         <div className="MediumScreen">
@@ -63,7 +87,7 @@ function App() {
       </Stack>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

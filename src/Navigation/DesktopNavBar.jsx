@@ -20,8 +20,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import Stack from "@mui/material/Stack";
 import { Link } from "@mui/material";
-import "../App.css"
-
+import "../App.css";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -63,7 +62,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function DesktopNavBar() {
+export default function DesktopNavBar({ searchTerm, handleChange }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -180,20 +179,57 @@ export default function DesktopNavBar() {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              onChange={handleChange}
             />
           </Search>
-          <Box sx={{ flexGrow: 3 }} className="menuForLargeScreen" >
+          <Box sx={{ flexGrow: 3 }} className="menuForLargeScreen">
             <Stack direction="row" spacing={4}>
-              <Link href="#" underline="none" className="myItem"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "19px"}}>Men Slippers</Typography></Link>
-              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", }}>Ladies Slippers</Typography></Link>
-              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", }}>Beads</Typography></Link>
+              <Link href="#" underline="none" className="myItem">
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#872EB0", fontSize: "19px" }}
+                >
+                  Men Slippers
+                </Typography>
+              </Link>
+              <Link href="#" underline="none">
+                <Typography variant="h6" sx={{ color: "#872EB0" }}>
+                  Ladies Slippers
+                </Typography>
+              </Link>
+              <Link href="#" underline="none">
+                <Typography variant="h6" sx={{ color: "#872EB0" }}>
+                  Beads
+                </Typography>
+              </Link>
             </Stack>
           </Box>
-		  <Box sx={{ flexGrow: 3 }} className="menuForMediumScreen" >
+          <Box sx={{ flexGrow: 3 }} className="menuForMediumScreen">
             <Stack direction="row" spacing={3}>
-              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Men </Typography></Link>
-              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Ladies</Typography></Link>
-              <Link href="#" underline="none"><Typography variant="h6" sx={{color: "#872EB0", fontSize: "15px"}}>Beads</Typography></Link>
+              <Link href="#" underline="none">
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#872EB0", fontSize: "15px" }}
+                >
+                  Men{" "}
+                </Typography>
+              </Link>
+              <Link href="#" underline="none">
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#872EB0", fontSize: "15px" }}
+                >
+                  Ladies
+                </Typography>
+              </Link>
+              <Link href="#" underline="none">
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#872EB0", fontSize: "15px" }}
+                >
+                  Beads
+                </Typography>
+              </Link>
             </Stack>
           </Box>
 

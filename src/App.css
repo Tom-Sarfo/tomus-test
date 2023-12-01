@@ -10,6 +10,7 @@
 .BannerlargeScreen {
   width: 60%;
 }
+
 .HeroFirstColumn {
   display: flex;
   flex-direction: column;
