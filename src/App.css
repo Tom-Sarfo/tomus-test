@@ -58,11 +58,12 @@
 
 .ItemCard {
   position: relative;
-  width: 300px;
+  max-width: 297px;
+  /* flex: 1; */
 }
 
 .CardImage {
-  height: 310px;
+  height: 307px;
 }
 
 .catalogTitle {
@@ -161,6 +162,7 @@
   .BannerlargeScreen {
     width: 80%;
   }
+
   .SecondDiscoveryTag {
     padding: 3rem;
   }
@@ -236,12 +238,12 @@
   }
 
   .ItemCard {
-    width: 350px;
+    width: 300px;
     margin-bottom: 20px;
   }
 
   .CardImage {
-    height: 360px;
+    height: 310px;
   }
 
   .TaglineWrapperLScreen {
@@ -287,6 +289,15 @@
   .banner {
     margin-top: 0px;
   }
+
+  .ItemCard {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .CardImage {
+    height: 210px;
+  }
   .SecondDiscoveryTag {
     padding: 3rem;
   }
@@ -302,6 +313,15 @@
     width: 250px;
   }
 
+  .ItemCard {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .CardImage {
+    height: 210px;
+  }
+
   .SecondDiscoveryTag {
     padding: 2rem;
   }
@@ -312,6 +332,17 @@
     font-size: large;
   }
 }
+
+@media (max-width: 423px) {
+  .ItemCard{
+    width: 180px;
+  }
+
+  .CardImage{
+    height: 190px;
+  }
+}
+
 
 @media (max-width: 412px) {
   .fDbannerImg {
@@ -330,7 +361,7 @@
   }
 
   .ItemCard {
-    min-width: 170px;
+    min-width: 150px;
     margin-bottom: 1rem;
   }
 
@@ -356,10 +387,10 @@
     }
 
     .ItemCard {
-      width: 260px;
+      width: 150px;
     }
     .CardImage {
-      height: 270px;
+      height: 160px;
     }
   }
 
@@ -372,7 +403,7 @@
       display: none;
     }
     .ItemCard {
-      max-width: 250px;
+      max-width: 300px;
     }
     .CatalogSection {
       display: block;

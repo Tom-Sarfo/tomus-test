@@ -19,7 +19,6 @@ import Footer from "./Footer/Footer";
 import Drawer from "./Navigation/Menu/Drawer";
 import { useState } from "react";
 import SearchSuggested from "./Navigation/Search/SearchSuggested";
-import Search from "./Navigation/Search/Search";
 import { ItemData } from "./Common/ItemCard/ItemCardData";
 
 function App() {
