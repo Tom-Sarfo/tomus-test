@@ -5,19 +5,25 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import Switch from "@mui/material/Switch";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormGroup from "@mui/material/FormGroup";
+import MenuItem from "@mui/material/MenuItem";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import Button from "@mui/material/Button"
-import { styled, useTheme } from "@mui/material/styles";
 
 import Menu from "@mui/material/Menu";
 
 import "./Styles/Navigation.css";
 
-export default function MobileNavBar() {
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+export default function MobileNavBar({openDrawer, setOpenDrawer}) {
+	const [auth, setAuth] = React.useState(true);
+	const [anchorEl, setAnchorEl] = React.useState(null);
 
+	const showDrawer = () => {
+		setOpenDrawer(true);
+	};
 
 	const handleChange = (event) => {
 		setAuth(event.target.checked);
