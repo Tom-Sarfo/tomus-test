@@ -157,7 +157,19 @@
   align-items: center;
   padding: 5rem;
 }
+
 /* media queries */
+@media (min-width: 1421px) {
+.ItemCard {
+  position: relative;
+  max-width: 597px;
+  
+}
+}
+.CardImage {
+  height: 607px;
+}
+
 @media (max-width: 1420px) {
   .BannerlargeScreen {
     width: 80%;

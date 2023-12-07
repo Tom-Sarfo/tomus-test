@@ -11,9 +11,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Button from "@mui/material/Button";
@@ -252,10 +249,11 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
                 <LocalMallIcon />
               </IconButton>
             </Tooltip>
-            
+
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
+              sx={{ "&:hover": { color: "white", bgcolor: "secondary" } }}
               href="https://tomuswear.company.site/products"
             >
               store
