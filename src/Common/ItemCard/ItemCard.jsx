@@ -36,6 +36,7 @@ export default function ItemCard({ data }) {
               "&:hover": { color: "primary", outlineColor: "secondary" },
             }}
             href="https://tomuswear.company.site/products"
+            target="blank"
           >
             shop now
           </Button>

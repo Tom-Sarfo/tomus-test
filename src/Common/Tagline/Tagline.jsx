@@ -15,6 +15,7 @@ export default function Tagline({ section }) {
 			<Button
 				variant="contained"
 				href="https://tomuswear.company.site/products"
+				target="_blank"
 				className="HeroBtn"
 				sx={section[4]}
 			>
