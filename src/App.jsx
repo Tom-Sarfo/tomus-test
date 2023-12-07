@@ -71,7 +71,7 @@ function App() {
           Explore{" "}
           <b>
             <i>collections</i>
-          </b>
+          </b><br />
         </Typography>
         <MainCatalog />
       </section>

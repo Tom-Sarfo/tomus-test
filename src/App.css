@@ -68,6 +68,9 @@
 
 .catalogTitle {
   text-align: center;
+  /* margin-top: -5rem; */
+  display: block;
+  color: black;
 }
 
 .Favourite {

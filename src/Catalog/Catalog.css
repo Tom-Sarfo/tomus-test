@@ -40,6 +40,13 @@
   .MainCatalog {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-auto-rows: minmax(100px, auto);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 336px) {
+  .MainCatalog {
+    padding: 0rem;
   }
 }
 
@@ -49,5 +56,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* padding: 0rem; */
+
   }
 }
