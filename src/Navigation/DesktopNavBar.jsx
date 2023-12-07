@@ -181,21 +181,44 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
           </Search>
           <Box sx={{ flexGrow: 3 }} className="menuForLargeScreen">
             <Stack direction="row" spacing={4}>
-              <Link href="#" underline="none" className="myItem">
+              <Link
+                href="https://tomuswear.company.site/products/Nsaa-p445333930"
+                target="_blank"
+                underline="none"
+                className="myItem"
+              >
                 <Typography
                   variant="h6"
-                  sx={{ color: "#872EB0", fontSize: "19px" }}
+                  sx={{
+                    color: "#872EB0",
+                    fontSize: "19px",
+                    "&:hover": { color: "secondary" },
+                  }}
                 >
                   Men Slippers
                 </Typography>
               </Link>
-              <Link href="#" underline="none">
-                <Typography variant="h6" sx={{ color: "#872EB0" }}>
+              <Link
+                href="https://tomuswear.company.site/products/Tonto-Beach-p405556663"
+                target="_blank"
+                underline="none"
+              >
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#872EB0", "&:hover": { color: "secondary" } }}
+                >
                   Ladies Slippers
                 </Typography>
               </Link>
-              <Link href="#" underline="none">
-                <Typography variant="h6" sx={{ color: "#872EB0" }}>
+              <Link
+                href="https://tomuswear.company.site/products/Afro-G-p403124047"
+                target="_blank"
+                underline="none"
+              >
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#872EB0", "&:hover": { color: "secondary" } }}
+                >
                   Beads
                 </Typography>
               </Link>

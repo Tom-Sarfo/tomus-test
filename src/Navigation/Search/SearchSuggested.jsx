@@ -23,7 +23,11 @@ export default function ({ filteredData }) {
       >
         {filteredData?.map((item) => (
           <ListItem key={item.prod_id} disablePadding>
-            <ListItemButton component="a" href="#simple-list">
+            <ListItemButton
+              component="a"
+              href={item.productUrl}
+              sx={{ "&:hover": { color: "primary" } }}
+            >
               <ListItemText primary={item.productName} />
             </ListItemButton>
           </ListItem>

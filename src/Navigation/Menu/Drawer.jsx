@@ -12,7 +12,8 @@ import ListItemText from "@mui/material/ListItemText";
 import CloseIcon from "@mui/icons-material/Close";
 import ManIcon from "@mui/icons-material/Man";
 import WomanIcon from "@mui/icons-material/Woman";
-import DiamondIcon from '@mui/icons-material/Diamond';
+import DiamondIcon from "@mui/icons-material/Diamond";
+import Link from "@mui/material/Link";
 
 const drawerWidth = 240;
 export default function ({ openDrawer, setOpenDrawer }) {
@@ -43,16 +44,29 @@ export default function ({ openDrawer, setOpenDrawer }) {
         <Toolbar />
         <Divider />
         <List>
-          {["Men", "Ladies", "Beads"].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index === 0 && <ManIcon />}
-                  {index === 1 && <WomanIcon />}
-                  {index === 2 && <DiamondIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
+          {[
+            {
+              category: "Men",
+              link: "https://tomuswear.company.site/products/Gyinaso-p401826931",
+            },
+            {
+              category: "Ladies",
+              link: "https://tomuswear.company.site/products/Tonto-Beach-p405556663",
+            },
+            {
+              category: "Beads",
+              link: "https://tomuswear.company.site/products/Afro-G-p403124047",
+            },
+          ].map((menu, index) => (
+            <ListItem key={index} disablePadding>
+                <ListItemButton href={menu.link} sx={{ textDecoration: "none", color: "#757575", "&:hover": {color: "primary"}}}>
+                  <ListItemIcon>
+                    {index === 0 && <ManIcon />}
+                    {index === 1 && <WomanIcon />}
+                    {index === 2 && <DiamondIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={menu.category} />
+                </ListItemButton>
             </ListItem>
           ))}
         </List>
