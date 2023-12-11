@@ -4,6 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea } from "@mui/material";
 import Favourite from "../../Favourite";
+import { Link } from "react-router-dom";
 
 export default function ItemCard({ data }) {
   return (
@@ -28,18 +29,18 @@ export default function ItemCard({ data }) {
           </Typography>
         </CardContent>
         <center>
-          <Button
-            variant="outlined"
-            sx={{
-              marginBottom: "0.5rem",
-              color: "#872EB0",
-              "&:hover": { color: "primary", outlineColor: "secondary" },
-            }}
-            href="https://tomuswear.company.site/products"
-            target="blank"
-          >
-            shop now
-          </Button>
+          <Link to="/product">
+            <Button
+              variant="outlined"
+              sx={{
+                marginBottom: "0.5rem",
+                color: "#872EB0",
+                "&:hover": { color: "primary", outlineColor: "secondary" },
+              }}
+            >
+              shop now
+            </Button>
+          </Link>
         </center>
       </CardActionArea>
     </Card>

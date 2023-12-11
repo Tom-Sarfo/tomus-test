@@ -16,6 +16,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 
 import "./Styles/Navigation.css";
+import { Link } from "react-router-dom";
 
 export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
   const [auth, setAuth] = React.useState(true);
@@ -74,14 +75,16 @@ export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
                 // onClick={handleMenu}
                 sx={{ color: "#872EB0" }}
               >
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{ "&:hover": {color: "white", bgcolor: "secondary"} }}
-                  href="https://tomuswear.company.site/products"
-                >
-                  view store
-                </Button>
+                <Link to="">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{ "&:hover": { color: "white", bgcolor: "secondary" } }}
+                    href="https://tomuswear.company.site/products"
+                  >
+                    view store
+                  </Button>
+                </Link>
               </IconButton>
             </div>
           )}
