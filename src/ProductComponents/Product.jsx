@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import ProductShowcase from "../ProductShowcase";
+import Carousel from "./Carousel";
+import {ItemData} from "../Common/ItemCard/ItemCardData"
+
 
 const sizes = [
   { name: "thirty-six", value: 36 },
@@ -49,7 +52,7 @@ function Product() {
   return (
     <div className={styles.productContainer}>
       <div className={styles.productImage}>
-        <ProductShowcase />
+        <Carousel slides={ItemData[0].imgUrl} />
       </div>
       <div className={styles.productDetail}>
         <div className={styles.descPriceContainer}>

@@ -13,7 +13,7 @@ export default function ItemCard({ data }) {
         <CardMedia
           component="img"
           height="160"
-          image={data.imgUrl}
+          image={data.imgUrl[0]}
           alt="green iguana"
           className="CardImage"
         />
