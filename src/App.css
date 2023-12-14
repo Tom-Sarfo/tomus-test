@@ -110,6 +110,7 @@
 
 .FirstDisc1 {
   width: 60%;
+  border: 2px solid red;
 }
 
 .SecondDisc1 {
@@ -270,6 +271,12 @@
 }
 
 @media (max-width: 659px) {
+  /* .FirstDisc1 {
+    width: 60%;
+    border: 2px solid red;
+    display: block;
+  } */
+
   .LargeScreenBanner {
     display: none;
   }

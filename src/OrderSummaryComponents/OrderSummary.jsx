@@ -1,10 +1,11 @@
 import Divider from "@mui/material/Divider";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function OrderSummary() {
   const os = {
     inlineText: "flex justify-between text-gray-700",
-  }
+  };
 
   return (
     <div className="flex flex-col py-7 px-2 text-xl gap-4">
@@ -22,7 +23,9 @@ export default function OrderSummary() {
         <h2 className="font-bold">Total</h2>
         <span className="font-bold">$493</span>
       </div>
-      <button className="btn">Make Paymennt</button>
+      <Link to="https://paystack.com/pay/-gwaszu59q">
+        <button className="btn">Make Paymennt</button>
+      </Link>
     </div>
   );
 }

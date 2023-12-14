@@ -3,17 +3,7 @@ import Tagline from "../Common/Tagline/Tagline";
 import { data } from "../Common/Tagline/TaglineData";
 export default function SecondDiscovery() {
   return (
-    // <div className="SecondDiscCard">
-    // 	<Card className="SecondDiscInner">
-    // 		<CardMedia
-    // 			component="img"
-    // 			height="500"
-    // 			img=""
-    // 			alt="Birk Slippers"
-    //             className="firstDiscImg"
-    // 		/>
-    // 	</Card>
-    // </div>
+    
     <div className="SecondDiscovery">
       <section className="SecondDisc2">
         <Tagline section={data.SecondDiscovery} />
