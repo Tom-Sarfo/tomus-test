@@ -49,6 +49,10 @@
 
 .BannerMobileSmall {
   width: 100%;
+  height: 600px;
+  background-color: grey;
+  box-shadow: 0px;
+  border-radius: 0px;
 }
 
 .CatalogSection {
@@ -81,7 +85,7 @@
   color: #872eb0;
 }
 
-.menuForMediumScreen{
+.menuForMediumScreen {
   display: none;
 }
 
@@ -163,11 +167,10 @@
 
 /* media queries */
 @media (min-width: 1421px) {
-.ItemCard {
-  position: relative;
-  max-width: 597px;
-  
-}
+  .ItemCard {
+    position: relative;
+    max-width: 597px;
+  }
 }
 .CardImage {
   height: 607px;
@@ -231,11 +234,11 @@
 }
 
 @media (max-width: 942px) {
-  .menuForLargeScreen{
+  .menuForLargeScreen {
     display: none;
   }
 
-  .menuForMediumScreen{
+  .menuForMediumScreen {
     display: block;
   }
 }
@@ -289,6 +292,8 @@
   .CatalogSection {
     display: block;
     height: 100%;
+    margin-top: 140px;
+    margin-left: 2rem;
   }
   .caption {
     display: flex;
@@ -300,7 +305,10 @@
   .fDbannerImg {
     width: 300px;
   }
-
+  .CatalogSection {
+    margin-top: 140px;
+    margin-left: 3rem;
+  }
   .banner {
     margin-top: 0px;
   }
@@ -324,6 +332,15 @@
 }
 
 @media (max-width: 503px) {
+  .BannerMobileSmall {
+    width: 100%;
+  }
+
+  .CatalogSection {
+    margin-top: 0px;
+    margin-left: 2rem;
+  }
+
   .fDbannerImg {
     width: 250px;
   }
@@ -348,31 +365,37 @@
   }
 }
 
-@media (max-width: 423px) {
-  .ItemCard{
-    width: 180px;
-  }
-
-  .CardImage{
-    height: 190px;
+@media (max-width: 450px){
+  .CatalogSection {
+    margin-top: -120px;
+    margin-left: 1rem;
   }
 }
 
+@media (max-width: 423px) {
+  .ItemCard {
+    width: 180px;
+  }
+
+  .CatalogSection {
+    margin-top: -150px;
+    margin-left: 1rem;
+  }
+
+  .CardImage {
+    height: 190px;
+  }
+}
 
 @media (max-width: 412px) {
   .fDbannerImg {
     width: 230px;
   }
-
   .BannerlargeScreen {
     display: none;
   }
   .banner {
     display: block;
-  }
-
-  .CatalogSection {
-    margin-top: 180px;
   }
 
   .ItemCard {
@@ -383,7 +406,13 @@
   .CatalogSection {
     display: block;
     height: 100%;
+    margin-top: -150px;
+    margin-left: 0px;
   }
+
+  .catalogTitle {
+  }
+
   .SecondDiscoveryTag {
     padding: 1.5rem;
   }

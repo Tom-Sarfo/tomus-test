@@ -7,6 +7,9 @@
 	.BannerMobileSmall {
 		margin-top: 0.5rem;
 	}
+	.banner {
+		height: 200px;
+	}
 }
 
 @media (max-width: 412px) {
@@ -14,6 +17,15 @@
 		height: 4500px;
 	}
 	.banner {
-		height: 450px;
+		height: 300px;
+	}
+}
+
+@media (max-width: 659px) {
+	.BannerMobileSmall {
+		height: 4900px;
+	}
+	.banner{
+		height: 620px;
 	}
 }

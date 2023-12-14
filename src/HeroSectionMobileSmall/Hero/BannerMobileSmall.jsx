@@ -11,9 +11,7 @@ export default function Hero() {
 			<Tagline section={data.Banner}/>
 			<Card
 				sx={{
-					width: "100%",
-					height: 600,
-					backgroundColor: "grey",
+					boxShadow: 0
 				}}
 				className="BannerMobileSmall"
 			>
