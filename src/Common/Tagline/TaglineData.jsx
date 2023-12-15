@@ -2,9 +2,9 @@ export const data = {
   Banner: [
     {
       title: [
-        { firstline: "Craft" },
-        { secondline: "that" },
-        { thirdline: "fit your lifestyle" },
+        { firstline: "Charley" },
+        { secondline: "you be guy!" },
+        { thirdline: "don't settle for less" },
       ],
     },
     { typoVariant: "h4" },
@@ -19,9 +19,9 @@ export const data = {
   Banner1: [
     {
       title: [
-        { firstline: "Craft" },
-        { secondline: "that" },
-        { thirdline: "fit your lifestyle" },
+        { firstline: "We" },
+        { secondline: "dey give" },
+        { thirdline: "you" },
       ],
     },
     { typoVariant: "h4" },
