@@ -15,6 +15,10 @@
   display: flex;
   flex-direction: column;
 }
+.Tagline {
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
 .Tagline1 {
   color: #872eb0;
   padding: 6rem;
@@ -408,7 +412,7 @@
   .CatalogSection {
     display: block;
     height: 100%;
-    margin-top: 0px;
+    margin-top: -80px;
     margin-left: 0px;
   }
 
@@ -433,6 +437,21 @@
       width: 190px;
     }
 
+    .CatalogSection {
+      display: block;
+      height: 100%;
+      margin-top: -200px;
+      margin-left: 0px;
+    }
+
+    .Tagline {
+      margin-left: 5rem;
+      margin-top: 0rem;
+      font-size: 5px;
+      font-weight: 100;
+
+    }
+
     .ItemCard {
       width: 150px;
     }
@@ -442,6 +461,11 @@
   }
 
   @media (max-width: 320px) {
+    .Tagline {
+      font-size: 1px;
+      font-weight: 100;
+
+    }
     .fDbannerImg {
       width: 190px;
     }
@@ -455,6 +479,7 @@
     .CatalogSection {
       display: block;
       height: 100%;
+      margin-top: -200px;
     }
     .SecondDiscoveryTag {
       padding: 1rem;
