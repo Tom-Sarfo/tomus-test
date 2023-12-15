@@ -75,12 +75,11 @@ export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
                 // onClick={handleMenu}
                 sx={{ color: "#872EB0" }}
               >
-                <Link to="">
+                <Link to="https://tomuswear.company.site/products">
                   <Button
                     variant="contained"
                     color="primary"
                     sx={{ "&:hover": { color: "white", bgcolor: "secondary" } }}
-                    href="https://tomuswear.company.site/products"
                   >
                     view store
                   </Button>
