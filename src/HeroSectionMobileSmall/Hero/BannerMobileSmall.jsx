@@ -9,24 +9,7 @@ export default function Hero() {
 	return (
 		<div className="banner">
 			<Tagline section={data.Banner}/>
-			<Card
-				sx={{
-					boxShadow: 0
-				}}
-				className="BannerMobileSmall"
-			>
-				<CardMedia
-					component="img"
-					height="600"
-					width="100%"
-					image="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355487565.jpg"
-					alt="Paella dish"
-					sx={{
-						borderBottomRightRadius: "0px",
-						borderBottomLeftRadius: "0px",
-					}}
-				/>
-			</Card>
+			<img src="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355487565.jpg" height="600" width="100%" alt="" />
 		</div>
 	);
 }
