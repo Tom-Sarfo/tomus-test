@@ -24,7 +24,7 @@ function Product() {
   const [quantity, setQuantity] = useState(0);
 
   const styles = {
-    productContainer: "flex flex-col h-screen text-2xl ",
+    productContainer: "flex flex-col h-screen text-2xl pb-5",
     productImage: "bg-white w-full h-auto ",
     productDetail: "bg-white w-full h-56 flex p-3 flex-col my-11",
     descPriceContainer: "flex justify-between",
