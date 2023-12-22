@@ -25,8 +25,8 @@ function Product() {
 
   const styles = {
     productContainer: "flex flex-col h-screen text-2xl ",
-    productImage: "bg-gray-500 w-full h-2/4 flex justify-center items-center",
-    productDetail: "bg-white w-full h-56 flex p-3 flex-col",
+    productImage: "bg-white w-full h-auto ",
+    productDetail: "bg-white w-full h-56 flex p-3 flex-col my-11",
     descPriceContainer: "flex justify-between",
     imageIcon: "text-white",
     selectSize: "flex justify-between mt-10 text-black",
@@ -52,7 +52,7 @@ function Product() {
   return (
     <div className={styles.productContainer}>
       <div className={styles.productImage}>
-        <Carousel slides={ItemData[0].imgUrl} />
+        <Carousel />
       </div>
       <div className={styles.productDetail}>
         <div className={styles.descPriceContainer}>

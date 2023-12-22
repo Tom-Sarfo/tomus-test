@@ -10,7 +10,7 @@ export default function SecondDiscovery() {
       </section>
       <section className="SecondDisc1">
         <img
-          src="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3494508035.jpg"
+          src="https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355415646.jpg"
           alt="Tomus footwear"
           className="firstDiscImg"
         />

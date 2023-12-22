@@ -144,12 +144,16 @@
 }
 
 .firstDiscImg {
-  width: 1000px;
+  /* width: 1000px; */
 }
 
 .secondDiscImg {
   width: 40%;
   margin-left: 80px;
+}
+
+.SecondDiscovery{
+  /* height: 600px; */
 }
 
 .Footer {
@@ -159,7 +163,7 @@
   align-items: center;
   background-color: #f2ede9;
   height: 200px;
-  margin-top: 10rem;
+  margin-top: 2rem;
   padding: 0.5rem;
   color: #872eb0;
 }
@@ -402,6 +406,14 @@
   }
   .banner {
     display: block;
+  }
+
+  .SecondDiscovery{
+    /* height: 200px; */
+  }
+
+  .Footer{
+    margin-top: 2rem;
   }
 
   .ItemCard {
