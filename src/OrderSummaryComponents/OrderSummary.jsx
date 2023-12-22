@@ -23,7 +23,7 @@ export default function OrderSummary() {
         <h2 className="font-bold">Total</h2>
         <span className="font-bold">$493</span>
       </div>
-      <Link to="https://paystack.com/pay/-gwaszu59q">
+      <Link to="https://flutterwave.com/pay/tomusbirkndsq">
         <button className="btn">Make Paymennt</button>
       </Link>
     </div>
