@@ -4,22 +4,14 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
 import "./Navigation/Styles/SwitchScreen.css";
-import HeroMediumScreen from "./HeroSection/Hero/HeroMediumScreen";
-
 import DesktopNavBar from "./Navigation/DesktopNavBar";
 import MobileNavbar from "./Navigation/MobileNavBar";
-import MainSection from "./HeroSection/MainSection";
-import Hero from "./HeroSectionMobileSmall/Hero/BannerMobileSmall";
-import MainCatalog from "./Catalog/MainCatalog";
-import FirstDiscovery from "./Discovery/FirstDiscovery";
-import SecondDiscovery from "./Discovery/SecondDiscovery";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
 import Footer from "./Footer/Footer";
 import Drawer from "./Navigation/Menu/Drawer";
 import { useState } from "react";
 import SearchSuggested from "./Navigation/Search/SearchSuggested";
 import { ItemData } from "./Common/ItemCard/ItemCardData";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -58,32 +50,8 @@ function App() {
       {openDrawer && (
         <Drawer setOpenDrawer={setOpenDrawer} openDrawer={openDrawer} />
       )}
-      <section className="HeroSection">
-        <MainSection />
-        <div className="MediumScreen">
-          <HeroMediumScreen />
-        </div>
-        <Hero />
-      </section>
 
-      <section className="CatalogSection">
-        <Typography className="catalogTitle">
-          Explore{" "}
-          <b>
-            <i>collections</i>
-          </b><br />
-        </Typography>
-        <MainCatalog />
-      </section>
-
-      <Stack spacing={4}>
-        <section className="FirstDiscovery">
-          <FirstDiscovery />
-        </section>
-        <section className="SecondDiscovery">
-          <SecondDiscovery />
-        </section>
-      </Stack>
+      <Outlet />
 
       <Footer />
     </div>

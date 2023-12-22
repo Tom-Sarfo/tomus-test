@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
 export default function Footer() {
   return (
-    <footer className="Footer">
+    <footer className="Footer pb-11">
       <div className="Icons">
         <Stack direction="row" spacing={6}>
           <Link

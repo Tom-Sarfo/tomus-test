@@ -7,37 +7,43 @@ import ErrorPage from "./error-page.jsx";
 import Product from "./ProductComponents/Product.jsx";
 import App from "./App.jsx";
 import Cart from "./CartComponents/Cart.jsx";
+import MainBody from "./MainBody.jsx";
 import ShippingOutlet from "./ShippingComponents/ShippingOutlet.jsx"
 import OrderSummary from "./OrderSummaryComponents/OrderSummary.jsx"
+import "./index.css";
+import { theme } from "./Common/ColorTheme.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "/product",
-    element: <Product />,
-  },
-  {
-    path: "/cart",
-    element: <Cart />,
     children: [
       {
-        path: "/cart",
-        element: <ShippingOutlet />
+        path: "/",
+        element: <MainBody />
       },
       {
-        path: "/cart/summary",
-        element: <OrderSummary />
+        path: "/product",
+        element: <Product />,
       },
+      {
+        path: "/cart",
+        element: <Cart />,
+        children: [
+          {
+            path: "/cart",
+            element: <ShippingOutlet />
+          },
+          {
+            path: "/cart/summary",
+            element: <OrderSummary />
+          },
+        ]
+      }  
     ]
-  }  
+  },
 ]);
-
-import "./index.css";
-import { theme } from "./Common/ColorTheme.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
