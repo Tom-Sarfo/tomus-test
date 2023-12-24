@@ -8,15 +8,30 @@ export default function OrderSummary() {
   };
 
   return (
-    <div className="flex flex-col py-7 px-2 text-xl gap-4">
+    <div className="flex flex-col py-7 lg:py-0 px-2 text-xl gap-4">
       <Divider />
-      <h1 className="text-2xl font-bold">Order summary</h1>
+      <h1 className="text-2xl font-bold text-black">Order summary</h1>
+      <div>
+        <p className="text-black font-bold mb-2">Shipping details</p>
+        <div className={os.inlineText}>
+          <p className="mr-2">Location: </p>{" "}
+          <span>Dansoman Nsuobri st. Ghana</span>
+        </div>
+        <div className={os.inlineText}>
+          <p className="mr-2">Email:</p>
+          <span>tomsarfodavis@gmail.com</span>
+        </div>
+        <div className={os.inlineText}>
+          <p className="mr-2">Phone:</p>
+          <span>0549649770</span>
+        </div>
+      </div>
       <div className={os.inlineText}>
-        <p>Subtotal</p>
+        <p>Subtotal:</p>
         <span>$453</span>
       </div>
       <div className={os.inlineText}>
-        <p>Shipping</p>
+        <p>Shipping fee:</p>
         <span>$20</span>
       </div>
       <div className={os.inlineText}>
