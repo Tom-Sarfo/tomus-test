@@ -11,6 +11,7 @@ export const ItemData = [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355500592.jpg",
     ],
     fav: false,
+    inStock: true, 
   },
   {
     prod_id: 2,
@@ -24,6 +25,7 @@ export const ItemData = [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355500592.jpg",
     ],
     fav: false,
+    inStock: true, 
   },
   {
     prod_id: 3,
@@ -37,6 +39,7 @@ export const ItemData = [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355500592.jpg",
     ],
     fav: true,
+    inStock: true, 
   },
   {
     prod_id: 4,
@@ -50,6 +53,7 @@ export const ItemData = [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355500592.jpg",
     ],
     fav: false,
+    inStock: true, 
   },
   {
     prod_id: 4,
@@ -63,6 +67,7 @@ export const ItemData = [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355500592.jpg",
     ],
     fav: false,
+    inStock: true, 
   },
   {
     prod_id: 4,
@@ -76,5 +81,6 @@ export const ItemData = [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355500592.jpg",
     ],
     fav: false,
+    inStock: true, 
   },
 ];

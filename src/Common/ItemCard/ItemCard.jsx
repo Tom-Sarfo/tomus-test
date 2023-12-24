@@ -29,7 +29,7 @@ export default function ItemCard({ data }) {
           </Typography>
         </CardContent>
         <center>
-          <Link to="/product">
+          <Link to={`/product/${data.prod_id}`}>
             <Button
               variant="outlined"
               sx={{

@@ -14,7 +14,11 @@ export default function CartCard() {
           <label for="sizes" className="text-red-500">
             size:{" "}
           </label>
-          <select className="bg-white text-black border-2" name="sizes" id="sizes">
+          <select
+            className="bg-white text-black border-2"
+            name="sizes"
+            id="sizes"
+          >
             <option value="36">36</option>
             <option value="37">37</option>
             <option value="38">38</option>
@@ -30,8 +34,12 @@ export default function CartCard() {
 
         <div className="flex justify-between my-2 text-black">
           <p className="">
-            Qty: {" "}
-            <input type="number" className="w-6 border-2 rounded bg-white" value="1" />
+            Qty:{" "}
+            <input
+              type="number"
+              className="w-6 border-2 rounded bg-white"
+              value="1"
+            />
           </p>
           <p className="font-bold text-purple-500">$100 x 1</p>
         </div>

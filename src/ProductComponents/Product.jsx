@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../App.css";
 import ProductShowcase from "../ProductShowcase";
 import Carousel from "./Carousel";
 import { ItemData } from "../Common/ItemCard/ItemCardData";
 import Footer from "../Footer/Footer";
+import { useDispatch } from "react-redux";
+import { AddItem } from "./CartSlice";
 
 const sizes = [
   { name: "thirty-six", value: 36 },
@@ -20,8 +22,16 @@ const sizes = [
 ];
 
 function Product() {
-  const [count, setCount] = useState(0);
+  const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(0);
+
+  const dispatch = useDispatch();
+  const prod_id = useParams();
+
+  const items = ItemData.filter((item) => item.prod_id === Number(prod_id.id));
+  console.log(items);
+  console.log((prod_id.id));
+
 
   const styles = {
     productContainer:
@@ -37,7 +47,25 @@ function Product() {
     callToActionContainer: "mt-3 flex w-full justify-evenly",
     IncDecContainer: "flex items-baseline mx-10",
   };
-  
+
+  const cartItem = {
+    prod_id: Number(prod_id),
+    productName: items[0].productName,
+    price: items[0].productPrice,
+    size: size,
+    qty: quantity,
+    imgUrl: items[0].imgUrl[0],
+  }
+
+  function handleAddItemToCart() {
+    dispatch(AddItem(cartItem));
+  }
+
+  function handleSizeChange(e){
+    setSize(e.target.value);
+  }
+  // console.log(size);
+
   const handleQtyIncrement = () => {
     if (quantity >= 0) {
       setQuantity(quantity + 1);
@@ -52,67 +80,67 @@ function Product() {
 
   return (
     <div>
-
-    <div className={styles.productContainer}>
-      <div className="flex flex-col lg:flex-row lg:p-11">
-        <div className={styles.productImage}>
-          <Carousel />
-        </div>
-        <div className={styles.productDetail}>
-          <div className={styles.descPriceContainer}>
-            <p className="typo">
-              This is the description of the product being displayed here.
-            </p>
-            <p className="price">$100</p>
+      <div className={styles.productContainer}>
+        <div className="flex flex-col lg:flex-row lg:p-11">
+          <div className={styles.productImage}>
+            <Carousel data = {items} />
           </div>
-          <div className={styles.selectSize}>
-            <p className="text-2xl md:text-3xl ml-2 lg:px-5">Size: </p>
-            <form className={styles.sizesContainer}>
-              {sizes.map((size, index) => (
-                <>
-                  <input
-                    type="radio"
-                    name="sizes"
-                    id={size.name}
-                    className="size-radio"
-                    key={index}
-                    value={size.value}
-                  />
-                  <label
-                    htmlFor={size.name}
-                    id="size-box"
-                    className={size.name}
-                  >
-                    {size.value}
-                  </label>
-                </>
-              ))}
-            </form>
-          </div>
-          <div className={styles.qty}>
-            <p>Quantity: </p>
-            <div className={styles.IncDecContainer}>
-              <button className="circle" onClick={handleQtyIncrement}>
-                +
-              </button>
-              <p>{quantity}</p>
-              <button className="circle" onClick={handleDecIncrement}>
-                -
-              </button>
+          <div className={styles.productDetail}>
+            <div className={styles.descPriceContainer}>
+              <p className="typo">
+                This is the description of the product being displayed here.
+              </p>
+              <p className="price">${items[0].productPrice}</p>
+            </div>
+            <div className={styles.selectSize}>
+              <p className="text-2xl md:text-3xl ml-2 lg:px-5">Size: </p>
+              <form className={styles.sizesContainer}>
+                {sizes.map((size, index) => (
+                  <>
+                    <input
+                      type="radio"
+                      name="sizes"
+                      id={size.name}
+                      className="size-radio"
+                      key={index}
+                      value={size.value}
+                      onChange={handleSizeChange}
+                    />
+                    <label
+                      htmlFor={size.name}
+                      id="size-box"
+                      className={size.name}
+                    >
+                      {size.value}
+                    </label>
+                  </>
+                ))}
+              </form>
+            </div>
+            <div className={styles.qty}>
+              <p>Quantity: </p>
+              <div className={styles.IncDecContainer}>
+                <button className="circle" onClick={handleQtyIncrement}>
+                  +
+                </button>
+                <p>{quantity}</p>
+                <button className="circle" onClick={handleDecIncrement}>
+                  -
+                </button>
+              </div>
+            </div>
+            <div className={styles.callToActionContainer}>
+              <Link to="/cart" className="w-full">
+                <button className="btn" onClick={handleAddItemToCart}>
+                  Buy now
+                </button>
+              </Link>
             </div>
           </div>
-          <div className={styles.callToActionContainer}>
-            <Link to="/cart" className="w-full">
-              <button className="btn">Buy now</button>
-            </Link>
-          </div>
         </div>
-      </div>
-      <div className="">
+        <div className=""></div>
       </div>
     </div>
-    </div>
-
   );
 }
 
