@@ -5,8 +5,8 @@ import ProductShowcase from "../ProductShowcase";
 import Carousel from "./Carousel";
 import { ItemData } from "../Common/ItemCard/ItemCardData";
 import Footer from "../Footer/Footer";
-import { useDispatch } from "react-redux";
-import { AddItem } from "./CartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { AddItem } from "../CartComponents/CartSlice"
 
 const sizes = [
   { name: "thirty-six", value: 36 },
@@ -27,11 +27,11 @@ function Product() {
 
   const dispatch = useDispatch();
   const prod_id = useParams();
-
+  const stuff = useSelector((state) => state.cart.value);
+  console.log(stuff);
   const items = ItemData.filter((item) => item.prod_id === Number(prod_id.id));
-  console.log(items);
-  console.log((prod_id.id));
-
+  // console.log(items);
+  // console.log(prod_id.id);
 
   const styles = {
     productContainer:
@@ -49,22 +49,21 @@ function Product() {
   };
 
   const cartItem = {
-    prod_id: Number(prod_id),
+    prod_id: Number(prod_id.id),
     productName: items[0].productName,
     price: items[0].productPrice,
     size: size,
     qty: quantity,
     imgUrl: items[0].imgUrl[0],
-  }
+  };
 
   function handleAddItemToCart() {
     dispatch(AddItem(cartItem));
   }
 
-  function handleSizeChange(e){
+  function handleSizeChange(e) {
     setSize(e.target.value);
   }
-  // console.log(size);
 
   const handleQtyIncrement = () => {
     if (quantity >= 0) {
@@ -83,7 +82,7 @@ function Product() {
       <div className={styles.productContainer}>
         <div className="flex flex-col lg:flex-row lg:p-11">
           <div className={styles.productImage}>
-            <Carousel data = {items} />
+            <Carousel data={items} />
           </div>
           <div className={styles.productDetail}>
             <div className={styles.descPriceContainer}>
@@ -138,7 +137,7 @@ function Product() {
             </div>
           </div>
         </div>
-        <div className=""></div>
+        <div></div>
       </div>
     </div>
   );

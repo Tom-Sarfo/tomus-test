@@ -1,15 +1,23 @@
 import React from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import CloseIcon from "@mui/icons-material/Close";
+import CardMedia from '@mui/material/CardMedia';
+import { useDispatch, useSelector } from "react-redux";
 
-export default function CartCard() {
+export default function CartCard({data}) {
+  const stuff = useSelector((state) => state.cart);
+  
   return (
     <div className="cartCard">
-      <div className="flex-none w-32 py-11 px-12 text-gray-500 bg-gray-300">
-        <ImageIcon />
+        
+      <div className="flex-none w-32 text-gray-500 bg-gray-300 overflow-scroll">
+      <img
+        src={data.imgUrl}
+        alt={data.productName}
+      />
       </div>
       <div className="grow w-48  text-xl text-left px-4 py-2">
-        <p className="font-bold text-gray-700">Afro-G</p>
+        <p className="font-bold text-gray-700">{data.productName}</p>
         <div>
           <label for="sizes" className="text-red-500">
             size:{" "}
@@ -18,6 +26,7 @@ export default function CartCard() {
             className="bg-white text-black border-2"
             name="sizes"
             id="sizes"
+            value={data.size}
           >
             <option value="36">36</option>
             <option value="37">37</option>
@@ -38,10 +47,10 @@ export default function CartCard() {
             <input
               type="number"
               className="w-6 border-2 rounded bg-white"
-              value="1"
+              value={data.qty}
             />
           </p>
-          <p className="font-bold text-purple-500">$100 x 1</p>
+          <p className="font-bold text-purple-500">${data.productPrice} x 1</p>
         </div>
       </div>
       <div className="py-11">
