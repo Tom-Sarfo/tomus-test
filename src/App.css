@@ -206,6 +206,7 @@
     margin-left: 600px;
   }
 }
+
 @media (max-width: 1009px) {
   .fDbannerImg {
     width: 400px;
@@ -252,7 +253,11 @@
     display: block;
   }
 }
-
+@media (mix-width: 768px){
+  #outlined-multiline-static{
+    width: 50px;
+  }
+}
 @media (max-width: 767px) {
   .BannerlargeScreen {
     display: none;

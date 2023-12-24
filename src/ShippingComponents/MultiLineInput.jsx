@@ -11,6 +11,8 @@ export default function MultiLineInput() {
         rows={4}
         placeholder="eg. St: Nsoubri st      State: Greater Accra   City:  Dansoman (Karikari) LandMark(optional): Adjacent Karikari Park
         "
+        sx={{width: "30ch"}}
+        className="multilineTextField"
       />
     </div>
   );
