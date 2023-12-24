@@ -2,10 +2,11 @@ import React from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import CloseIcon from "@mui/icons-material/Close";
 import CardMedia from '@mui/material/CardMedia';
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 
 export default function CartCard({data}) {
-  const stuff = useSelector((state) => state.cart);
+  // const stuff = useSelector((state) => state.cart);
+  
   
   return (
     <div className="cartCard">

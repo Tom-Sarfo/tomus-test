@@ -27,8 +27,11 @@ function Product() {
 
   const dispatch = useDispatch();
   const prod_id = useParams();
-  const stuff = useSelector((state) => state.cart.value);
-  console.log(stuff);
+  const cartData = useSelector((state) => {
+    localStorage.setItem('cart', JSON.stringify(state.cart));
+  });
+
+  
   const items = ItemData.filter((item) => item.prod_id === Number(prod_id.id));
   // console.log(items);
   // console.log(prod_id.id);
@@ -59,6 +62,7 @@ function Product() {
 
   function handleAddItemToCart() {
     dispatch(AddItem(cartItem));
+    cartData;
   }
 
   function handleSizeChange(e) {

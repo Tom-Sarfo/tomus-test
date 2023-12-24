@@ -19,9 +19,11 @@ export const CartSlice = createSlice({
                 imgUrl: action.payload.imgUrl
             }
             state.cart.push(item);
+
         },
     }
 })
+
 console.log(initialState);
 
 export const { AddItem, EditItem, RemoveItem } = CartSlice.actions;

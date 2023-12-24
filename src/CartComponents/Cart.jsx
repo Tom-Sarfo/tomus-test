@@ -1,14 +1,15 @@
 import Stack from "@mui/material/Stack";
 import CartCard from "./CartCard";
 import { Outlet } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 
 const cartSyles = {
   container: "flex flex-col py-5 h-full px-4 mt-16",
 };
 
 export default function Cart() {
-  const cartData = useSelector((state) => state.cart);
+  // const cartData = useSelector((state) => state.cart);
+  const cartData = JSON.parse(localStorage.getItem('cart'));
 
   return (
     <div className={cartSyles.container}>
