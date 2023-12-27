@@ -33,7 +33,7 @@ function App() {
   console.log(filteredData);
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative" }} className="bg-white">
       <nav>
         <div className="DesktopNavBar">
           <DesktopNavBar searchTerm={searchTerm} handleChange={handleChange} />
