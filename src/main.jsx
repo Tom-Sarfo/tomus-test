@@ -12,8 +12,6 @@ import ShippingOutlet from "./ShippingComponents/ShippingOutlet.jsx";
 import OrderSummary from "./OrderSummaryComponents/OrderSummary.jsx";
 import "./index.css";
 import { theme } from "./Common/ColorTheme.jsx";
-import { store } from "./store/Store";
-import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
   {
@@ -49,14 +47,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <CookiesProvider defaultSetOptions={{ path: "/" }}>
-          <RouterProvider router={router}>
-            <App />
-          </RouterProvider>
-        </CookiesProvider>
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <CookiesProvider defaultSetOptions={{ path: "/" }}>
+        <RouterProvider router={router}>
+          <App />
+        </RouterProvider>
+      </CookiesProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

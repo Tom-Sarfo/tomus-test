@@ -5,8 +5,7 @@ import ProductShowcase from "../ProductShowcase";
 import Carousel from "./Carousel";
 import { ItemData } from "../Common/ItemCard/ItemCardData";
 import Footer from "../Footer/Footer";
-import { useDispatch, useSelector } from "react-redux";
-import { AddItem } from "../CartComponents/CartSlice"
+import useCartStore from "../store/cartStore";
 
 const sizes = [
   { name: "thirty-six", value: 36 },
@@ -25,11 +24,9 @@ function Product() {
   const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(0);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const prod_id = useParams();
-  const cartData = useSelector((state) => {
-    localStorage.setItem('cart', JSON.stringify(state.cart));
-  });
+  const addCartItem = useCartStore((state) => state.AddCartItem);
 
   
   const items = ItemData.filter((item) => item.prod_id === Number(prod_id.id));
@@ -61,7 +58,7 @@ function Product() {
   };
 
   function handleAddItemToCart() {
-    dispatch(AddItem(cartItem));
+    addCartItem(cartItem);
     cartData;
   }
 
