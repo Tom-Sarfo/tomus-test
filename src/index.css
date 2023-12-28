@@ -133,6 +133,9 @@ body {
   @apply sm:flex sm:justify-between sm:items-center;
 }
 
+/* .ProdCard {
+  @apply drop-shadow-none;
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

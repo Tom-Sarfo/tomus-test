@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../App.css";
 import ProductShowcase from "../ProductShowcase";
@@ -24,11 +24,15 @@ function Product() {
   const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(0);
 
+  useEffect(() => {
+    // scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   // const dispatch = useDispatch();
   const prod_id = useParams();
   const addCartItem = useCartStore((state) => state.AddCartItem);
 
-  
   const items = ItemData.filter((item) => item.prod_id === Number(prod_id.id));
   // console.log(items);
   // console.log(prod_id.id);
