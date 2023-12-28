@@ -2,11 +2,14 @@ import React from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import CloseIcon from "@mui/icons-material/Close";
 import CardMedia from '@mui/material/CardMedia';
-// import { useDispatch, useSelector } from "react-redux";
+import useCartStore from "../store/cartStore";
 
 export default function CartCard({data}) {
-  // const stuff = useSelector((state) => state.cart);
-  
+  const removeItem = useCartStore((state) => state.RemoveCartItem);
+
+  function handleRemoveItem(prodId){
+    removeItem(prodId);
+  }
   
   return (
     <div className="cartCard">
@@ -55,7 +58,7 @@ export default function CartCard({data}) {
         </div>
       </div>
       <div className="py-11">
-        <button className="flex-none w-7  border-2  h-7 rounded-full bg-red-300">
+        <button className="flex-none w-7  border-2  h-7 rounded-full bg-red-300" onClick={() => handleRemoveItem(data.prod_id)}>
           <CloseIcon sx={{ fontSize: "12px", marginBottom: "3px" }} />
         </button>
       </div>
