@@ -1,8 +1,12 @@
 import React from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import CloseIcon from "@mui/icons-material/Close";
+<<<<<<< Updated upstream
 import CardMedia from '@mui/material/CardMedia';
 // import { useDispatch, useSelector } from "react-redux";
+=======
+import useCartStore from "../store/cartStore";
+>>>>>>> Stashed changes
 
 export default function CartCard({data}) {
   // const stuff = useSelector((state) => state.cart);
@@ -15,6 +19,7 @@ export default function CartCard({data}) {
       <img
         src={data.imgUrl}
         alt={data.productName}
+        className=""
       />
       </div>
       <div className="grow w-48  text-xl text-left px-4 py-2">

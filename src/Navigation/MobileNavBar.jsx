@@ -5,13 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormGroup from "@mui/material/FormGroup";
-import MenuItem from "@mui/material/MenuItem";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import Button from "@mui/material/Button";
+import LocalMallIcon from "@mui/icons-material/LocalMall";
+import Badge from "@mui/material/Badge";
+import useCartStore from "../store/cartStore";
 
 import Menu from "@mui/material/Menu";
 
@@ -22,6 +19,8 @@ export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const cartItems = useCartStore((state) => state.cart);
+  const cartCount = cartItems.length;
   const showDrawer = () => {
     setOpenDrawer(true);
   };
@@ -72,17 +71,11 @@ export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                // onClick={handleMenu}
-                sx={{ color: "#872EB0" }}
               >
-                <Link to="https://tomuswear.company.site/products">
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    sx={{ "&:hover": { color: "white", bgcolor: "secondary" } }}
-                  >
-                    view store
-                  </Button>
+                <Link to="/cart">
+                  <Badge badgeContent={cartCount} color="secondary">
+                    <LocalMallIcon sx={{ color: "#872EB0" }} />
+                  </Badge>
                 </Link>
               </IconButton>
             </div>
