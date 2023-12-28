@@ -30,7 +30,6 @@ function App() {
     });
     setFilteredData(search);
   };
-  console.log(filteredData);
 
   return (
     <div style={{ position: "relative" }} className="bg-white">

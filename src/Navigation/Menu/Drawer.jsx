@@ -13,7 +13,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import ManIcon from "@mui/icons-material/Man";
 import WomanIcon from "@mui/icons-material/Woman";
 import DiamondIcon from "@mui/icons-material/Diamond";
-import Link from "@mui/material/Link";
+import StorefrontIcon from "@mui/icons-material/Storefront";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 export default function ({ openDrawer, setOpenDrawer }) {
@@ -46,27 +47,26 @@ export default function ({ openDrawer, setOpenDrawer }) {
         <List>
           {[
             {
-              category: "Men",
-              link: "https://tomuswear.company.site/products/Gyinaso-p401826931",
-            },
-            {
-              category: "Ladies",
-              link: "https://tomuswear.company.site/products/Tonto-Beach-p405556663",
-            },
-            {
-              category: "Beads",
-              link: "https://tomuswear.company.site/products/Afro-G-p403124047",
+              category: "Store",
+              link: "/products",
             },
           ].map((menu, index) => (
             <ListItem key={index} disablePadding>
-                <ListItemButton href={menu.link} sx={{ textDecoration: "none", color: "#757575", "&:hover": {color: "primary"}}}>
+              <Link to={menu.link}>
+                <ListItemButton
+                  // href={menu.link}
+                  sx={{
+                    textDecoration: "none",
+                    color: "#757575",
+                    "&:hover": { color: "primary" },
+                  }}
+                >
                   <ListItemIcon>
-                    {index === 0 && <ManIcon />}
-                    {index === 1 && <WomanIcon />}
-                    {index === 2 && <DiamondIcon />}
+                    {index === 0 && <StorefrontIcon />}
                   </ListItemIcon>
                   <ListItemText primary={menu.category} />
                 </ListItemButton>
+              </Link>
             </ListItem>
           ))}
         </List>

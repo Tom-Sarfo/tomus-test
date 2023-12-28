@@ -16,7 +16,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import Stack from "@mui/material/Stack";
-import { Link } from "@mui/material";
+// import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
+import useCartStore from "../store/cartStore";
 import "../App.css";
 
 const Search = styled("div")(({ theme }) => ({
@@ -65,6 +67,9 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const cartItems = useCartStore((state) => state.cart);
+  const cartCount = cartItems.length;
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -161,14 +166,17 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" sx={{ bgcolor: "white" }}>
         <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block", color: "#872EB0" } }}
-          >
-            Tomus
-          </Typography>
+          <Link to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: "none", sm: "block", color: "#872EB0" } }}
+            >
+              Tomus
+            </Typography>
+          </Link>
+
           <Search sx={{ color: "#872EB0" }}>
             <SearchIconWrapper>
               <SearchIcon />
@@ -181,12 +189,7 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
           </Search>
           <Box sx={{ flexGrow: 3 }} className="menuForLargeScreen">
             <Stack direction="row" spacing={4}>
-              <Link
-                href="https://tomuswear.company.site/products/Nsaa-p445333930"
-                target="_blank"
-                underline="none"
-                className="myItem"
-              >
+              <Link to="/products/birks" className="myItem">
                 <Typography
                   variant="h6"
                   sx={{
@@ -195,26 +198,10 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
                     "&:hover": { color: "secondary" },
                   }}
                 >
-                  Men Slippers
+                  Birks
                 </Typography>
               </Link>
-              <Link
-                href="https://tomuswear.company.site/products/Tonto-Beach-p405556663"
-                target="_blank"
-                underline="none"
-              >
-                <Typography
-                  variant="h6"
-                  sx={{ color: "#872EB0", "&:hover": { color: "secondary" } }}
-                >
-                  Ladies Slippers
-                </Typography>
-              </Link>
-              <Link
-                href="https://tomuswear.company.site/products/Afro-G-p403124047"
-                target="_blank"
-                underline="none"
-              >
+              <Link to="/products/beads">
                 <Typography
                   variant="h6"
                   sx={{ color: "#872EB0", "&:hover": { color: "secondary" } }}
@@ -272,15 +259,35 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
                 <LocalMallIcon />
               </IconButton>
             </Tooltip>
-
-            <Button
-              variant="contained"
-              color="primary"
-              sx={{ "&:hover": { color: "white", bgcolor: "secondary" } }}
-              href="https://tomuswear.company.site/products"
-            >
-              store
-            </Button>
+            <div>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+              >
+                <Link to="/cart">
+                  <Badge badgeContent={cartCount} color="secondary">
+                    <LocalMallIcon sx={{ color: "#872EB0" }} />
+                  </Badge>
+                </Link>
+              </IconButton>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+              >
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ "&:hover": { color: "white", bgcolor: "secondary" } }}
+                  href="https://tomuswear.company.site/products"
+                >
+                  store
+                </Button>
+              </IconButton>
+            </div>
           </Box>
         </Toolbar>
       </AppBar>

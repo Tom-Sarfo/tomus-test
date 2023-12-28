@@ -1,6 +1,6 @@
 import Stack from "@mui/material/Stack";
 import CartCard from "./CartCard";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import useCartStore from "../store/cartStore";
 import { useEffect } from "react";
 
@@ -22,9 +22,16 @@ export default function Cart() {
     <div className={cartSyles.container}>
       <div className="lg:mx-3">
         <Stack gap={0.5}>
-          {cart?.map((data) => (
-            <CartCard key={data.id} data={data} />
-          ))}
+          {cart.length === 0 ? (
+            <div className="flex justify-evenly">
+              <p className="text-black text-xl">your cart is empty</p>
+              <span className="text-blue-500">
+                <Link to="/products">Add an item</Link>
+              </span>
+            </div>
+          ) : (
+            cart?.map((data) => <CartCard key={data.id} data={data} />)
+          )}
         </Stack>
       </div>
       <Outlet />

@@ -57,13 +57,15 @@ export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
             <MenuIcon />
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
+
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, color: "#872EB0" }}
           >
-            Tomus
+            <Link to="/">Tomus</Link>
           </Typography>
+
           {auth && (
             <div>
               <IconButton
