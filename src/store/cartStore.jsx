@@ -20,7 +20,7 @@ const useCartStore = create(
             },
           ],
         })),
-      RemoveCartItem: (prod_id) => set((state) => ({ cart: state.cart.filter((data) => data.prod_id !== prod_id) })),
+      RemoveCartItem: (itemId) => set((state) => ({ cart: state.cart.filter((data) => data.id !== itemId) })),
     }),
     {
       name: "cart-item",

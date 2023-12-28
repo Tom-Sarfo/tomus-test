@@ -7,8 +7,8 @@ import useCartStore from "../store/cartStore";
 export default function CartCard({ data }) {
   const removeItem = useCartStore((state) => state.RemoveCartItem);
 
-  function handleRemoveItem(prodId) {
-    removeItem(prodId);
+  function handleRemoveItem(itemId) {
+    removeItem(itemId);
   }
 
   return (
@@ -56,7 +56,7 @@ export default function CartCard({ data }) {
       <div className="py-11">
         <button
           className="flex-none w-7  border-2  h-7 rounded-full bg-red-300"
-          onClick={() => handleRemoveItem(data.prod_id)}
+          onClick={() => handleRemoveItem(data.id)}
         >
           <CloseIcon sx={{ fontSize: "12px", marginBottom: "3px" }} />
         </button>
