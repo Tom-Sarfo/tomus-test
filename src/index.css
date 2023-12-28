@@ -129,6 +129,9 @@ body {
   @apply rounded border-2 border-purple-700 hover:bg-purple-400 text-black hover:text-white w-24 h-11 pl-5 pr-5 py-2 mr-2;
 }
 
+.cardContent {
+  @apply sm:flex sm:justify-between sm:items-center;
+}
 
 
 @media (prefers-color-scheme: light) {
