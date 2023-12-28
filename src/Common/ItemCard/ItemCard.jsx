@@ -20,7 +20,7 @@ export default function ItemCard({ data }) {
         <Favourite data={data} />
         <CardContent>
           <Typography height={30} variant="body2" color="text.secondary">
-            <div className="caption">
+            <div className="maxs:flex maxs:justify-between">
               <Typography>
                 <b>{data.productName}</b>
               </Typography>

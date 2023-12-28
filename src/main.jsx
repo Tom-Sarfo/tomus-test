@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./error-page.jsx";
 import Product from "./ProductComponents/Product.jsx";
+import Products from "./ProductCollection/Products.jsx";
 import App from "./App.jsx";
 import Cart from "./CartComponents/Cart.jsx";
 import MainBody from "./MainBody.jsx";
@@ -26,6 +27,16 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <Product />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
+        children: [
+          {
+            path: "/products/:design",
+            element: <Products />,
+          }
+        ]
       },
       {
         path: "/cart",

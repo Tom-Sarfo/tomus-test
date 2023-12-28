@@ -1,26 +1,20 @@
 import React from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import CloseIcon from "@mui/icons-material/Close";
-<<<<<<< Updated upstream
-import CardMedia from '@mui/material/CardMedia';
-// import { useDispatch, useSelector } from "react-redux";
-=======
-import useCartStore from "../store/cartStore";
->>>>>>> Stashed changes
 
-export default function CartCard({data}) {
-  // const stuff = useSelector((state) => state.cart);
-  
-  
+import useCartStore from "../store/cartStore";
+
+export default function CartCard({ data }) {
+  const removeItem = useCartStore((state) => state.RemoveCartItem);
+
+  function handleRemoveItem(prodId) {
+    removeItem(prodId);
+  }
+
   return (
     <div className="cartCard">
-        
       <div className="flex-none w-32 text-gray-500 bg-gray-300 overflow-scroll">
-      <img
-        src={data.imgUrl}
-        alt={data.productName}
-        className=""
-      />
+        <img src={data.imgUrl} alt={data.productName} className="" />
       </div>
       <div className="grow w-48  text-xl text-left px-4 py-2">
         <p className="font-bold text-gray-700">{data.productName}</p>
@@ -60,7 +54,10 @@ export default function CartCard({data}) {
         </div>
       </div>
       <div className="py-11">
-        <button className="flex-none w-7  border-2  h-7 rounded-full bg-red-300">
+        <button
+          className="flex-none w-7  border-2  h-7 rounded-full bg-red-300"
+          onClick={() => handleRemoveItem(data.prod_id)}
+        >
           <CloseIcon sx={{ fontSize: "12px", marginBottom: "3px" }} />
         </button>
       </div>
