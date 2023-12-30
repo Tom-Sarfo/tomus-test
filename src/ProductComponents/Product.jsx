@@ -87,6 +87,7 @@ function Product() {
             <Carousel data={items} />
           </div>
           <div className={styles.productDetail}>
+            <h1 className="text-black text-2xl font-bold pb-2 pt-0">{items[0].productName}</h1>
             <div className={styles.descPriceContainer}>
               <p className="typo">
                 This is the description of the product being displayed here.
