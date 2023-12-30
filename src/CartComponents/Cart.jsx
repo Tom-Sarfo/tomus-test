@@ -16,7 +16,6 @@ export default function Cart() {
   }, []);
 
   const cart = useCartStore((state) => state.cart);
-  const addCartItem = useCartStore((state) => state.AddCartItem);
 
   return (
     <div className={cartSyles.container}>

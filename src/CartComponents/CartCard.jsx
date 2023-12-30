@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import CloseIcon from "@mui/icons-material/Close";
 
 import useCartStore from "../store/cartStore";
 
 export default function CartCard({ data }) {
+  const [size, setSize] = useState();
   const removeItem = useCartStore((state) => state.RemoveCartItem);
+  const EditItem = useCartStore((state) => state.EditCartItem);
+
+  //this block gives a wrong output
+  function handleSizeChange(itemToEdit, newSize) {
+    setSize(newSize);
+    EditItem(itemToEdit, newSize);
+  }
 
   function handleRemoveItem(itemId) {
     removeItem(itemId);
@@ -27,6 +35,8 @@ export default function CartCard({ data }) {
             name="sizes"
             id="sizes"
             value={data.size}
+            //this block give a wrong output
+            onChange={(e) => handleSizeChange(data, e.target.value)}
           >
             <option value="36">36</option>
             <option value="37">37</option>

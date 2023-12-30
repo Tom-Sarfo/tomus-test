@@ -29,13 +29,10 @@ function Product() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
-  // const dispatch = useDispatch();
   const prod_id = useParams();
   const addCartItem = useCartStore((state) => state.AddCartItem);
 
   const items = ItemData.filter((item) => item.prod_id === Number(prod_id.id));
-  // console.log(items);
-  // console.log(prod_id.id);
 
   const styles = {
     productContainer:

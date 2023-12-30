@@ -163,9 +163,9 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ bgcolor: "white" }}>
-        <Toolbar>
+    <Box sx={{ flexGrow: 1}}>
+      <AppBar position="fixed" sx={{ bgcolor: "white", display:"flex", justifyContent: "space-between" }}>
+        <Toolbar sx={{display:"flex", justifyContent: "space-between" }}>
           <Link to="/">
             <Typography
               variant="h6"
@@ -211,7 +211,7 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
               </Link>
             </Stack>
           </Box>
-          <Box sx={{ flexGrow: 3 }} className="menuForMediumScreen">
+          {/* <Box sx={{ flexGrow: 3 }} className="menuForMediumScreen">
             <Stack direction="row" spacing={3}>
               <Link href="#" underline="none">
                 <Typography
@@ -238,7 +238,7 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
                 </Typography>
               </Link>
             </Stack>
-          </Box>
+          </Box> */}
 
           <Box
             sx={{
@@ -250,7 +250,7 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
               width: "20%",
             }}
           >
-            <Tooltip title="visit our store">
+            {/* <Tooltip title="visit our store">
               <IconButton
                 size="large"
                 aria-label="show 4 new mails"
@@ -258,8 +258,8 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
               >
                 <LocalMallIcon />
               </IconButton>
-            </Tooltip>
-            <div>
+            </Tooltip> */}
+            <div className="flex justify-between mr-0">
               <IconButton
                 size="large"
                 aria-label="account of current user"

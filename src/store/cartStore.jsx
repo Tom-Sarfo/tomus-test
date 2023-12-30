@@ -20,7 +20,18 @@ const useCartStore = create(
             },
           ],
         })),
-      RemoveCartItem: (itemId) => set((state) => ({ cart: state.cart.filter((data) => data.id !== itemId) })),
+      RemoveCartItem: (itemId) =>
+        set((state) => ({
+          cart: state.cart.filter((data) => data.id !== itemId),
+        })),
+      //this block give a wrong output
+      EditCartItem: (itemToEdit, newSize) =>
+        set((state) => ({
+          cart: state.cart.map((item) => {
+            item.id === itemToEdit.id ? { ...item, size: 3} : item;
+          }),
+          
+        })),
     }),
     {
       name: "cart-item",

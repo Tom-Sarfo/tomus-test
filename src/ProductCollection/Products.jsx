@@ -19,7 +19,7 @@ export default function products() {
   });
 
   return (
-    <div className="">
+    <div className="bg-white w-full">
       <FilterBar />
       <div className="product">
         {items.map((data, index) => (
