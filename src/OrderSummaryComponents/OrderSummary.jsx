@@ -1,8 +1,13 @@
 import Divider from "@mui/material/Divider";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function OrderSummary() {
+  useEffect(() => {
+    // scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   const os = {
     inlineText: "flex justify-between text-gray-700",
   };
