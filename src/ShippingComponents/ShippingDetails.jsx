@@ -3,7 +3,7 @@ import SelectCountryInput from "./SelectCountryInput";
 import TextInput from "./TextInput";
 import MultiLineInput from "./MultiLineInput";
 
-export default function ShippingDetails() {
+export default function ShippingDetails({shippingMethod}) {
   const ShippingDetails = {
     styles:
       "w-full my-4 flex flex-col py-4 px-4",
@@ -12,7 +12,7 @@ export default function ShippingDetails() {
   const fieldName = ["full Name", "email address", "phone"];
   return (
     <div className={ShippingDetails.styles}>
-      {true ? (
+      {shippingMethod == "Deliver to my location" ? (
         <div>
           <form action="">
             <SelectCountryInput />
@@ -25,7 +25,9 @@ export default function ShippingDetails() {
       ) : (
         <div>
           <form action="">
-            <input type="text" placeholder="Ship to me" />
+          {fieldName.map((field, index) => (
+              <TextInput key={index} fieldName={field} />
+            ))}
           </form>
         </div>
       )}
