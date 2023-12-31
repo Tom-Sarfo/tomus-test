@@ -307,8 +307,7 @@
   .CatalogSection {
     display: block;
     height: 100%;
-    margin-top: 140px;
-    margin-left: 2rem;
+    margin-top: 150px;
   }
 }
 
@@ -318,7 +317,6 @@
   }
   .CatalogSection {
     margin-top: 140px;
-    margin-left: 3rem;
   }
   .banner {
     margin-top: 0px;
@@ -349,7 +347,7 @@
 
   .CatalogSection {
     margin-top: 0px;
-    margin-left: 2rem;
+    
   }
 
   .fDbannerImg {
@@ -379,7 +377,6 @@
 @media (max-width: 450px) {
   .CatalogSection {
     margin-top: -100px;
-    margin-left: 1rem;
   }
 }
 

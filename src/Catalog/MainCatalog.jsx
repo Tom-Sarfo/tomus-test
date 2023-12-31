@@ -1,14 +1,13 @@
 import { Typography } from "@mui/material";
-import ItemCard from "../Common/ItemCard/ItemCard";
 import Stack from "@mui/material/Stack";
 import { ItemData } from "../Common/ItemCard/ItemCardData";
-import "./Catalog.css";
+import ProductCard from "../ProductCollection/ProductCard";
 
 export default function MainCatalog() {
   return (
-    <div className="MainCatalog">
+    <div className="product">
       {ItemData?.map((data) => (
-        <ItemCard key={data.prod_id} data={data} />
+        <ProductCard key={data.prod_id} data={data} />
       ))}
     </div>
   );
