@@ -260,7 +260,7 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
               </IconButton>
             </Tooltip> */}
             <div className="flex justify-between mr-0">
-              <IconButton
+              {/* <IconButton
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
@@ -271,7 +271,7 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
                     <LocalMallIcon sx={{ color: "#872EB0" }} />
                   </Badge>
                 </Link>
-              </IconButton>
+              </IconButton> */}
               <IconButton
                 size="large"
                 aria-label="account of current user"

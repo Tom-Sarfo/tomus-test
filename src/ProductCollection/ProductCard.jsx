@@ -15,6 +15,7 @@ export default function ProductCard({ data }) {
           height="160"
           image={data.imgUrl[0]}
           alt="green iguana"
+          srcSet=""
           className="CardImage"
         />
         <Favourite data={data} />
@@ -44,43 +45,3 @@ export default function ProductCard({ data }) {
     </Card>
   );
 }
-
-// import { Image } from "@mui/icons-material";
-// import React from "react";
-// import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-// import Card from "@mui/material/Card";
-// import CardMedia from "@mui/material/CardMedia";
-// import CardContent from "@mui/material/CardContent";
-// import {CardActionArea} from "@mui/material";
-// import "../App.css"
-
-// export default function ProductCard({ data }) {
-//   return (
-//     <div>
-//       {/* className="flex flex-col bg-white rounded-xl" */}
-//       <Card className="prodCard">
-//         <CardActionArea>
-//         <CardMedia
-//           component="img"
-//           height={250}
-//           image={data.imgUrl[0]}
-//           alt={data.productName}
-//         />
-//         <CardContent>
-//           <div className="flex justify-between p-2 items-center">
-//             <div>
-//               <p className="text-black">{data.productName}</p>
-//               <p className="text-black font-bold">${data.produtPrice}</p>
-//             </div>
-
-//             <div className="flex items-center">
-//               <ThumbUpIcon sx={{ color: "#872eb0" }} />
-//               <span className="text-black">50</span>
-//             </div>
-//           </div>
-//         </CardContent>
-//         </CardActionArea>
-//       </Card>
-//     </div>
-//   );
-// }

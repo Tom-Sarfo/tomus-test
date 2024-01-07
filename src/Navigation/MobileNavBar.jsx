@@ -9,6 +9,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import Badge from "@mui/material/Badge";
 import useCartStore from "../store/cartStore";
+import Button from "@mui/material/Button";
+
+
 
 import Menu from "@mui/material/Menu";
 
@@ -68,7 +71,8 @@ export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
 
           {auth && (
             <div>
-              <IconButton
+              {/* Disable cart for now */}
+              {/* <IconButton
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
@@ -79,6 +83,21 @@ export default function MobileNavBar({ openDrawer, setOpenDrawer }) {
                     <LocalMallIcon sx={{ color: "#872EB0" }} />
                   </Badge>
                 </Link>
+              </IconButton> */}
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+              >
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ "&:hover": { color: "white", bgcolor: "secondary" } }}
+                  href="https://tomuswear.company.site/products"
+                >
+                  store
+                </Button>
               </IconButton>
             </div>
           )}

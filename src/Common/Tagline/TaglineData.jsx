@@ -54,8 +54,8 @@ export const data = {
     {
       title: [
         { firstline: "Explore" },
-        { secondline: "Mens" },
-        { thirdline: "Collections" },
+        { secondline: "Double strap" },
+        { thirdline: "Collection" },
       ],
     },
     { typoVariant: "h4" },

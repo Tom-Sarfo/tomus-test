@@ -1,5 +1,3 @@
-import { Typography } from "@mui/material";
-import Stack from "@mui/material/Stack";
 import { ItemData } from "../Common/ItemCard/ItemCardData";
 import ProductCard from "../ProductCollection/ProductCard";
 

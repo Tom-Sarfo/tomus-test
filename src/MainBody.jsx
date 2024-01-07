@@ -34,9 +34,10 @@ export default function MainBody() {
         <section className="FirstDiscovery">
           <FirstDiscovery />
         </section>
-        <section className="SecondDiscovery">
+        {/* SecondDiscovery is disabled */}
+        {/* <section className="SecondDiscovery">
           <SecondDiscovery />
-        </section>
+        </section> */}
       </Stack>
     </div>
   );
