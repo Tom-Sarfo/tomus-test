@@ -13,10 +13,9 @@ export default function Tagline({ section }) {
         </b>
       </Typography>
       <br />
-      <Link to="/products">
+      <Link to="https://tomuswear.company.site/products/">
         <Button
           variant="contained"
-          href="/"
           className="HeroBtn"
           sx={section[4]}
         >

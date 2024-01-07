@@ -189,7 +189,8 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
           </Search>
           <Box sx={{ flexGrow: 3 }} className="menuForLargeScreen">
             <Stack direction="row" spacing={4}>
-              <Link to="/products/birks" className="myItem">
+              {/* link use to be /products/birks */}
+              <Link to="https://tomuswear.company.site/products/" className="myItem">
                 <Typography
                   variant="h6"
                   sx={{
@@ -201,7 +202,8 @@ export default function DesktopNavBar({ searchTerm, handleChange }) {
                   Birks
                 </Typography>
               </Link>
-              <Link to="/products/beads">
+              {/* /product/beads */}
+              <Link to="https://tomuswear.company.site/products/Afro-G-p403124047">
                 <Typography
                   variant="h6"
                   sx={{ color: "#872EB0", "&:hover": { color: "secondary" } }}

@@ -32,9 +32,10 @@ export const ItemData = [
   },
   {
     prod_id: 3,
-    productName: "Tonto",
+    productName: "Tonto Beach",
     productPrice: 154,
-    productUrl: "https://tomuswear.company.site/products/Afro-G-p403124047",
+    productUrl:
+      "https://tomuswear.company.site/products/Tonto-Beach-p405556663",
     imgUrl: [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355487565.jpg",
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355477403.jpg",
@@ -50,7 +51,7 @@ export const ItemData = [
     prod_id: 4,
     productName: "Gyinaso",
     productPrice: 164,
-    productUrl: "https://tomuswear.company.site/products/Afro-G-p403124047",
+    productUrl: "https://tomuswear.company.site/products/Gyinaso-p401826931",
     imgUrl: [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/2940960914.jpg",
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/2622512745.jpg",
@@ -65,7 +66,7 @@ export const ItemData = [
     prod_id: 5,
     productName: "Double straps",
     productPrice: 159,
-    productUrl: "https://tomuswear.company.site/products/Afro-G-p403124047",
+    productUrl: "https://tomuswear.company.site/products/Two-Buckle-p445342754",
     imgUrl: [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355513252.jpg",
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/2935873878.jpg",
@@ -79,7 +80,7 @@ export const ItemData = [
   {
     prod_id: 6,
     productName: "Akuaba",
-    productUrl: "https://tomuswear.company.site/products/Afro-G-p403124047",
+    productUrl: "https://tomuswear.company.site/products/Akuaba-p403124078",
     productPrice: 200,
     imgUrl: [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/2618618486.jpg",
@@ -95,7 +96,7 @@ export const ItemData = [
     prod_id: 7,
     productName: "Afro-B",
     productPrice: 200,
-    productUrl: "https://tomuswear.company.site/products/Afro-G-p403124047",
+    productUrl: "https://tomuswear.company.site/products/Afro-B-p403117106",
     imgUrl: [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3346181476.jpg",
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3346646594.jpg",
@@ -109,12 +110,29 @@ export const ItemData = [
   {
     prod_id: 8,
     productName: "Kokromote",
-    productUrl: "https://tomuswear.company.site/products/Afro-G-p403124047",
+    productUrl: "https://tomuswear.company.site/products/Kokromote-p403124102",
     productPrice: 200,
     imgUrl: [
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355329452.jpg",
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/2618638740.jpg",
       "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3355329455.jpg",
+    ],
+    category: "unisex",
+    type: "birks",
+    fav: false,
+    inStock: true,
+  },
+  {
+    prod_id: 9,
+    productName: "Tonto",
+    productUrl:
+      "https://tomuswear.company.site/products/Tonto-Black-p403117672",
+    productPrice: 200,
+    imgUrl: [
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3494507286.jpg",
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3494508035.jpg",
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3494501106.jpg",
+      "https://d2j6dbq0eux0bg.cloudfront.net/images/66306271/3494501106.jpg",
     ],
     category: "unisex",
     type: "birks",

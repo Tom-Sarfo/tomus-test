@@ -28,7 +28,8 @@ export default function ProductCard({ data }) {
               <Typography>¢{data.productPrice}</Typography>
             </div>
           </Typography>
-          <Link to={`/product/${data.prod_id}`}>
+          {/* use to be /product/data.prod_id */}
+          <Link to={data.productUrl}>
             <Button
               variant="outlined"
               sx={{
