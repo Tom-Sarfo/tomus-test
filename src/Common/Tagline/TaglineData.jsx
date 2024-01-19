@@ -2,7 +2,7 @@ export const data = {
   Banner: [
     {
       title: [
-        { firstline: "Charley" },
+        { firstline: "Charley!" },
         { secondline: "you be guy!" },
         { thirdline: "don't settle for less" },
       ],
