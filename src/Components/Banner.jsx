@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
-import Image from "../common/Image";
-import { bannerMediaObject } from "../MediaObjects";
+// import Image from "../common/Image";
+// import { bannerMediaObject } from "../MediaObjects";
 
 function Banner() {
   return (
@@ -13,9 +13,9 @@ function Banner() {
         // backgroundColor: "#D9D9D9",
       }}
     >
-      {/* <img src="https://res.cloudinary.com/dki2r1gnf/image/upload/v1726069370/Mobile-header_abhzty.jpg" 
-       style={{width: '100%', height: 'auto'}}/> */}
-      <Image mediaObject={bannerMediaObject}/>
+      <img src="https://res.cloudinary.com/dki2r1gnf/image/upload/v1726069370/Mobile-header_abhzty.jpg" 
+       style={{width: '100%', height: 'auto'}}/>
+      {/* <Image mediaObject={bannerMediaObject}/> */}
     </Box>
   );
 }
