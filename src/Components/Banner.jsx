@@ -13,7 +13,7 @@ function Banner() {
         // backgroundColor: "#D9D9D9",
       }}
     >
-      <img src="https://res.cloudinary.com/dki2r1gnf/image/upload/v1726069370/Mobile-header_abhzty.jpg" 
+      <img src="src/assets/Mobile-header.jpg" 
        style={{width: '100%', height: 'auto'}}/>
       {/* <Image mediaObject={bannerMediaObject}/> */}
     </Box>
