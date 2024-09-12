@@ -1,21 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
+  color: #000000;
   background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  /* display: flex;
+  place-items: center; */
+  height: 100vh;
 }
 
 h1 {
@@ -23,118 +34,23 @@ h1 {
   line-height: 1.1;
 }
 
-body {
-  max-height: 100%;
-  background-color: #ffffff;
-  width: 100%;
-  margin: 0px;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
-
-@layer components {
-  .Entry {
-    /* @apply text-lg */
-  }
-  .btn {
-    @apply bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-4 text-xl mt-0 uppercase rounded-lg w-full my-5 2xl:mx-5;
-  }
-  .addToCart {
-    @apply bg-white border-2 border-purple-700 hover:bg-purple-800 hover:text-white text-purple-700 py-1 px-4 text-xs uppercase rounded-sm;
-  }
-
-  #size-box {
-    @apply border-gray-400 border h-11 w-11 md:h-20 md:w-20 text-xl md:text-3xl py-2 md:py-5 px-2 md:px-5;
-  }
-  .size-box-clicked {
-    @apply border-black border h-11 w-11 md:h-20 md:w-20 bg-purple-700 text-white text-xl;
-  }
-  .typo {
-    @apply text-black w-36 text-left xs:text-lg md:text-3xl lg:px-5;
-    /* font-size: 10px; */
-    flex-grow: 1;
-  }
-  .price {
-    @apply text-purple-700 text-right text-2xl md:text-3xl font-bold;
-    flex-grow: 1;
-  }
-  .circle {
-    @apply border-2 border-gray-400 rounded-full w-9 md:w-14 h-9 md:h-14 mx-2 text-2xl md:text-3xl;
-    /* font-size: 10px; */
-  }
-
-  /* customise this for radio button cards */
-  .size-radio {
-    @apply hidden checked:bg-purple-700;
-  }
-
-  .label {
-    @apply px-3 py-3 bg-purple-700 text-white border-2 border-black cursor-pointer;
-  }
-
-  #forty-five:checked ~ .forty-five,
-  #forty-four:checked ~ .forty-four,
-  #forty-three:checked ~ .forty-three,
-  #forty-two:checked ~ .forty-two,
-  #forty-one:checked ~ .forty-one,
-  #forty:checked ~ .forty,
-  #thirty-nine:checked ~ .thirty-nine,
-  #thirty-eight:checked ~ .thirty-eight,
-  #thirty-seven:checked ~ .thirty-seven,
-  #thirty-six:checked ~ .thirty-six {
-    background-color: blueviolet;
-    color: white;
-    border: 1px solid black;
-  }
-
-  .cartCard {
-    @apply w-full rounded-lg bg-white flex border-2;
-    /* border-width: 2px; */
-    height: 120px;
-  }
-
-  /* Customize Card radio button styles */
-  .radioCardBtn {
-    @apply hidden checked:bg-purple-700;
-  }
-
-  #radioCardlabel {
-    @apply flex items-center justify-evenly text-gray-500 mx-1 rounded border-gray-500 border h-16 w-44 text-xl p-4;
-  }
-  .slider{
-    @apply w-full h-1/2 md:h-3/4;
-  }
-
-  #myLocation:checked ~ .myLocation,
-  #pickUp:checked ~ .pickUp {
-    background-color: blueviolet;
-    color: white;
-    border: 1px solid black;
-  }
+button:hover {
+  border-color: #646cff;
 }
-
-/* productCard */
-.product {
-  @apply bg-white px-2 grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4;
-  display: grid;
-  grid-auto-rows: minmax(20rem, auto);
-  gap: 10px;
-}
-
-
-.filter{
-  @apply mt-16 p-6 flex justify-center;
-  
-}
-
-.filterBtn {
-  @apply rounded border-2 border-purple-700 hover:bg-purple-400 text-black hover:text-white w-24 h-11 pl-5 pr-5 py-2 mr-2;
-}
-
-.cardContent {
-  @apply sm:flex sm:justify-between sm:items-center;
-}
-
-.CardImage {
-  @apply lg:h-96;
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {

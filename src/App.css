@@ -1,493 +1,59 @@
-.LargeScreenBanner {
-  display: flex;
-  width: 100%;
-  background-color: #f2ede9;
-}
-.BannerlargeScreen1 {
-  position: relative;
+#root {
+  margin: 0 auto;
+  /* padding: 2rem; */
+  /* text-align: center; */
 }
 
-.BannerlargeScreen {
-  width: 60%;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.HeroFirstColumn {
-  display: flex;
-  flex-direction: column;
-}
-.Tagline {
-  margin-top: 3rem;
-  margin-left: 1rem;
-}
-.Tagline1 {
-  color: #872eb0;
-  padding: 6rem;
-  font-weight: 400;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.TaglineWrapperLScreen {
-  margin-top: 90px;
-  position: absolute;
-  margin-left: 500px;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.fDbannerImg {
-  width: 700px;
+.card {
+  padding: 2em;
 }
 
-.MediumScreen {
-  display: none;
+.read-the-docs {
+  color: #888;
 }
-
-.HeroPaper {
-  display: flex;
-  padding: 1rem;
-}
-
-.HeroForMobileSmall {
-  display: none;
-}
-
-.banner {
-  display: none;
-}
-
-.BannerMobileSmall {
-  width: 100%;
-  height: 600px;
-  background-color: grey;
-  box-shadow: 0px;
-  border-radius: 0px;
-}
-
-.CatalogSection {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.ItemCard {
-  position: relative;
-  max-width: 297px;
-  /* flex: 1; */
-}
-
-.CardImage {
-  height: 307px;
-}
-
-.catalogTitle {
-  text-align: center;
-  /* margin-top: -5rem; */
-  display: block;
-  color: black;
-}
-
-.Favourite {
-  position: absolute;
-  top: 0;
-  margin-top: 3px;
-  margin-left: 3px;
-  color: #872eb0;
-}
-
-.menuForMediumScreen {
-  display: none;
-}
-
-.SecondDiscovery {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  /* min-height: 150px; */
-  background-color: #f2ede9;
-}
-
-.SecondDiscoveryTag {
-  position: relative;
-  color: #872eb0;
-  padding: 4rem;
-}
-
-.FirstDiscovery {
-  display: flex;
-  width: 100%;
-}
-
-.FirstDisc1 {
-  width: 60%;
-  /* border: 2px solid red; */
-}
-
-.SecondDisc1 {
-  margin-right: 0px;
-}
-
-.TagContainer {
-  width: 50%;
-  height: 1450px;
-  padding: 2rem;
-  background-color: white;
-}
-
-.FirstDisc2tagline {
-  margin-top: 8rem;
-  color: #872eb0;
-}
-
-.SecondDiscCard {
-  position: absolute;
-}
-
-.SecondDiscInner {
-  display: flex;
-  width: 100%;
-}
-
-.firstDiscImg {
-  /* width: 1000px; */
-}
-
-.secondDiscImg {
-  width: 40%;
-  margin-left: 80px;
-}
-
-.SecondDiscovery{
-  /* height: 600px; */
-}
-
-.Footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2ede9;
-  height: 200px;
-  margin-top: 2rem;
+.product-caption {
+  height: 70px;
   padding: 0.5rem;
-  color: #872eb0;
 }
 
-.Icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
+.product-caption:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* media queries */
-@media (min-width: 1421px) {
-  .ItemCard {
-    position: relative;
-    max-width: 597px;
-  }
+.circle {
+  background: linear-gradient(315deg, #00ccff, #8531ab);
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
 }
-.CardImage {
-  height: 607px;
-}
-
-@media (max-width: 1420px) {
-  .BannerlargeScreen {
-    width: 80%;
-  }
-
-  .SecondDiscoveryTag {
-    padding: 3rem;
-  }
-  .SecondDiscoveryTag h2 {
-  }
-  .firstDiscImg {
-    width: 600px;
-  }
-  .BannerlargeScreen {
-    display: none;
-  }
-  .TaglineWrapperLScreen {
-    margin-left: 600px;
-  }
-}
-
-@media (max-width: 1009px) {
-  .fDbannerImg {
-    width: 400px;
-  }
-
-  .FirstDisc2tagline {
-    margin-top: 0px;
-    padding: 0.5rem;
-  }
-
-  .TagContainer {
-    display: none;
-  }
-
-  .FirstDisc2 {
-  }
-
-  .firstDiscImg {
-    width: 100%;
-  }
-
-  .SecondDiscoveryTag {
-    padding: 4rem;
-  }
-
-  .BannerlargeScreen {
-    display: none;
-  }
-  .TaglineWrapperLScreen {
-    margin-left: 400px;
-  }
-
-  .BannerlargeScreenImage {
-    width: 50%;
-  }
-}
-
-@media (max-width: 942px) {
-  .menuForLargeScreen {
-    display: none;
-  }
-
-  .menuForMediumScreen {
-    display: block;
-  }
-}
-@media (mix-width: 768px){
-  #outlined-multiline-static{
-    width: 50px;
-  }
-}
-@media (max-width: 767px) {
-  .BannerlargeScreen {
-    display: none;
-  }
-  .MediumScreen {
-    display: block;
-  }
-
-  .CatalogSection {
-    margin-top: 30px;
-  }
-
-  .ItemCard {
-    width: 300px;
-    margin-bottom: 20px;
-  }
-
-  .CardImage {
-    height: 310px;
-  }
-
-  .TaglineWrapperLScreen {
-    margin-left: 300px;
-  }
-}
-
-@media (max-width: 659px) {
-  .LargeScreenBanner {
-    display: none;
-  }
-  .Tagline1 {
-    display: none;
-  }
-  .banner {
-    display: block;
-  }
-
-  .ItemCard {
-    width: 350px;
-    margin-bottom: 20px;
-  }
-
-  .CardImage {
-    height: 360px;
-  }
-
-  .CatalogSection {
-    display: block;
-    height: 100%;
-    margin-top: 150px;
-  }
-}
-
-@media (max-width: 644px) {
-  .fDbannerImg {
-    width: 300px;
-  }
-  .CatalogSection {
-    margin-top: 140px;
-  }
-  .banner {
-    margin-top: 0px;
-  }
-
-  .ItemCard {
-    width: 200px;
-    margin-bottom: 20px;
-  }
-
-  .CardImage {
-    height: 210px;
-  }
-  .SecondDiscoveryTag {
-    padding: 3rem;
-  }
-
-  .TaglineWrapper {
-    padding-top: 50px;
-    padding-left: 250px;
-  }
-}
-
-@media (max-width: 503px) {
-  .BannerMobileSmall {
-    width: 100%;
-  }
-
-  .CatalogSection {
-    margin-top: 0px;
-    
-  }
-
-  .fDbannerImg {
-    width: 250px;
-  }
-
-  .ItemCard {
-    width: 200px;
-    margin-bottom: 20px;
-  }
-
-  .CardImage {
-    height: 210px;
-  }
-
-  .SecondDiscoveryTag {
-    padding: 2rem;
-  }
-  .SecondDiscoveryTag h2 {
-    font-size: large;
-  }
-  .FirstDisc2tagline h2 {
-    font-size: large;
-  }
-}
-
-@media (max-width: 450px) {
-  .CatalogSection {
-    margin-top: -100px;
-  }
-}
-
-@media (max-width: 423px) {
-  .ItemCard {
-    width: 180px;
-  }
-
-  .CatalogSection {
-    margin-top: -100px;
-    margin-left: 1rem;
-  }
-
-  .CardImage {
-    height: 190px;
-  }
-}
-
-@media (max-width: 412px) {
-  .fDbannerImg {
-    width: 230px;
-  }
-  .BannerlargeScreen {
-    display: none;
-  }
-  .banner {
-    display: block;
-  }
-
-  .Footer{
-    margin-top: 2rem;
-  }
-
-  .ItemCard {
-    min-width: 150px;
-    margin-bottom: 1rem;
-  }
-  
-  .CatalogSection {
-    display: block;
-    height: 100%;
-    margin-top: -80px;
-    margin-left: 0px;
-  }
-
-  .catalogTitle {
-    margin-top: 50px;
-  }
-
-  .SecondDiscoveryTag {
-    padding: 1.5rem;
-  }
-  .SecondDiscoveryTag h2 {
-    font-size: large;
-  }
-}
-
-  @media (max-width: 376px) {
-    .fDbannerImg {
-      width: 190px;
-    }
-
-    .CatalogSection {
-      display: block;
-      height: 100%;
-      margin-top: -200px;
-      margin-left: 0px;
-    }
-
-    .Tagline {
-      margin-left: 5rem;
-      margin-top: 0rem;
-      font-size: 5px;
-      font-weight: 100;
-
-    }
-
-    .ItemCard {
-      width: 150px;
-    }
-    .CardImage {
-      height: 160px;
-    }
-  }
-
-  @media (max-width: 320px) {
-    .Tagline {
-      font-size: 1px;
-      font-weight: 100;
-
-    }
-    .fDbannerImg {
-      width: 190px;
-    }
-
-    .HeroPaper {
-      display: none;
-    }
-    .ItemCard {
-      max-width: 300px;
-    }
-    .CatalogSection {
-      display: block;
-      height: 100%;
-      margin-top: -200px;
-    }
-    .SecondDiscoveryTag {
-      padding: 1rem;
-    }
-    .SecondDiscoveryTag h2 {
-      font-size: large;
-    }
-  }
-
