@@ -13,7 +13,7 @@ function Banner() {
         // backgroundColor: "#D9D9D9",
       }}
     >
-      <img src="src/assets/Mobile-header.jpg" 
+      <img src="/src/assets/Mobile-header.jpg" 
        style={{width: '100%', height: 'auto'}}/>
       {/* <Image mediaObject={bannerMediaObject}/> */}
     </Box>
